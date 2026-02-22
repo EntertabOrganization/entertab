@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "../ui/Button";
 
 export default function Hero() {
@@ -28,12 +29,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right - Hero Image Placeholder */}
+          {/* Right - Hero Image */}
           <div className="relative flex items-center justify-center lg:justify-end">
-            <div className="w-[320px] h-[400px] md:w-[420px] md:h-[500px] lg:w-[500px] lg:h-[580px] img-placeholder rounded-3xl text-lg">
-              Hero Image
-              <br />
-              (Decorative Green Shape)
+            <div className="w-[320px] h-[400px] md:w-[420px] md:h-[500px] lg:w-[500px] lg:h-[580px] relative">
+              <Image
+                src="/HeroSection.png"
+                alt="Decorative green shape"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </div>
         </div>

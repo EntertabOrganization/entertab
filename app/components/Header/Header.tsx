@@ -14,18 +14,35 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm border-b border-border-light/50">
+    <header className="absolute top-0 left-0 w-full z-50 backdrop-blur-sm border-b border-border-light/50">
       {/* Decorative background behind header */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-mint-subtle/60 to-mint/40" />
         <div className="absolute right-0 -bottom-6 w-64 h-40 bg-mint rounded-full opacity-30 filter blur-3xl transform translate-x-20" />
         <div
-          className="absolute top-0 left-0 -z-10"
+          className="-z-10"
           style={{
             width: "425px",
-            height: "201px",
+            height: "425px",
             opacity: 1,
-            background: "linear-gradient(139.68deg, rgba(182, 227, 209, 0.5) 11.55%, rgba(255, 255, 255, 0.5) 62.48%)",
+            background: "#B6E3D1",
+            borderRadius: "50%",
+            position: "absolute",
+            top: "-285px",
+            left: "-185px",
+          }}
+        />
+        <div
+          className="-z-10"
+          style={{
+            width: "425px",
+            height: "425px",
+            opacity: 1,
+            background: "#B6E3D1",
+            borderRadius: "50%",
+            position: "absolute",
+            top: "-190px",
+            right: "-250px",
           }}
         />
       </div>

@@ -75,12 +75,12 @@ export default function Header() {
           </a>
 
           {/* Centered Navigation */}
-          <nav className="hidden lg:flex items-center gap-8 mx-auto">
+          <nav className="hidden lg:flex items-center mx-auto">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-text-dark text-sm font-medium hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className="text-text-dark text-[20px] font-large hover:text-primary transition-colors duration-200 relative mr-12 last:mr-0 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -113,7 +113,7 @@ export default function Header() {
               key={link.label}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-4 py-3 text-text-dark text-sm font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
+              className="block px-4 py-3 text-text-dark text-[20px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
             >
               {link.label}
             </a>

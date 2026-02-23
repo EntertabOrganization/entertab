@@ -41,7 +41,7 @@ const processSteps = [
 export default function WorkingProcess() {
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle title="Working Process" className="mb-2" />
         <h3 className="text-center text-2xl md:text-3xl font-bold text-text-dark mb-8 md:mb-12">

@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 export default function CTA() {
   return (
     <section className="relative py-12 md:py-16 overflow-hidden bg-gradient-to-r from-dark-teal via-dark-teal-light to-dark-teal">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug mb-6">
             Ready to create something

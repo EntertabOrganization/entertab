@@ -3,7 +3,7 @@ import SectionTitle from "../ui/SectionTitle";
 export default function AboutUs() {
   return (
     <section id="about" className="py-12 md:py-16 bg-mint/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle title="About Us" className="mb-8 md:mb-12" />
 

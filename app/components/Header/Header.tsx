@@ -89,7 +89,12 @@ export default function Header() {
 
           {/* Right actions */}
           <div className="flex items-center gap-4">
-            <a href="#contact" className="hidden lg:inline-flex items-center px-6 py-2.5 bg-btn-dark text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors duration-200">Let&apos;s Collaborate</a>
+            <a
+              href="#contact"
+              className="hidden lg:inline-flex items-center px-6 py-3.5 bg-[linear-gradient(90deg,_#666666_0%,_#282828_100%)] text-white text-sm font-medium rounded-[18px] hover:opacity-90 transition-opacity duration-200"
+            >
+              Let&apos;s Collaborate
+            </a>
 
             {/* Mobile Menu Button */}
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden flex flex-col gap-1.5 p-2 cursor-pointer" aria-label="Toggle menu">
@@ -121,7 +126,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="block mx-4 mt-3 text-center px-6 py-2.5 bg-btn-dark text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors duration-200"
+            className="block mx-4 mt-3 text-center px-6 py-3.5 bg-[linear-gradient(90deg,_#666666_0%,_#282828_100%)] text-white text-sm font-medium rounded-[18px] hover:opacity-90 transition-opacity duration-200"
           >
             Let&apos;s Collaborate
           </a>

@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-20 overflow-hidden bg-gradient-to-br from-white via-white to-mint-subtle"
+      className="relative min-h-screen pt-12 overflow-hidden bg-gradient-to-br from-white via-white to-mint-subtle"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 lg:pt-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Content */}
           <div className="z-10 relative">
@@ -22,7 +22,7 @@ export default function Hero() {
               performance across every touchpoint.
             </p>
 
-            <div className="mt-8 md:mt-10">
+            <div className="mt-6 md:mt-8">
               <Button variant="primary" href="#about">
                 More about us
               </Button>
@@ -44,7 +44,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom Decorative Elements */}
-        <div className="mt-8 md:mt-4 pb-12 flex items-end gap-8">
+        <div className="mt-6 md:mt-4 pb-8 flex items-end gap-8">
           <div className="w-[120px] h-[120px] md:w-[160px] md:h-[160px] img-placeholder rounded-xl opacity-60 text-xs">
             Decorative 1
           </div>
@@ -56,6 +56,33 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <div
+        className="-z-10"
+        style={{
+          width: "425px",
+          height: "425px",
+          opacity: 1,
+          background: "#B6E3D1",
+          borderRadius: "50%",
+          position: "absolute",
+          top: "-285px",
+          left: "-185px",
+        }}
+      />
+      <div
+        className="-z-10"
+        style={{
+          width: "425px",
+          height: "425px",
+          opacity: 1,
+          background: "#B6E3D1",
+          borderRadius: "50%",
+          position: "absolute",
+          top: "-190px",
+          right: "-250px",
+        }}
+      />
 
       {/* Go to top - vertical text */}
       <a

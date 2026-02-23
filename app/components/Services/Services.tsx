@@ -27,12 +27,12 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 md:py-24 bg-white">
+    <section id="services" className="py-12 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <SectionTitle title="Our Services" className="mb-4" />
+        <SectionTitle title="Our Services" className="mb-2" />
 
-        <p className="text-center text-text-dark text-lg md:text-xl font-medium mt-4 mb-12 md:mb-16">
+        <p className="text-center text-text-dark text-lg md:text-xl font-medium mt-2 mb-8 md:mb-12">
           We offer a wide range of digital solutions to help your business
           thrive
         </p>
@@ -58,7 +58,7 @@ export default function Services() {
         </div>
 
         {/* Show All Button */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-8">
           <Button variant="outline" href="#services">
             Show all services
           </Button>

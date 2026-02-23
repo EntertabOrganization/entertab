@@ -53,8 +53,8 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-dark-teal via-dark-teal-light to-dark-teal text-white">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-12 pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {/* Column 1 - Logo & Tagline */}
           <div>
             <div className="flex items-center gap-2 mb-3">

@@ -4,10 +4,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 md:py-24 bg-gradient-to-br from-white via-white to-mint-subtle"
+      className="py-12 md:py-16 bg-gradient-to-br from-white via-white to-mint-subtle"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           {/* Left Content */}
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-semibold italic text-primary leading-snug mb-6">
@@ -26,7 +26,7 @@ export default function Contact() {
             </p>
 
             {/* Decorative Element Placeholder */}
-            <div className="mt-12 w-[200px] h-[200px] img-placeholder rounded-xl opacity-40 text-xs !bg-transparent !border-2 !border-primary/30">
+            <div className="mt-8 w-[200px] h-[200px] img-placeholder rounded-xl opacity-40 text-xs !bg-transparent !border-2 !border-primary/30">
               Decorative Shape
             </div>
           </div>

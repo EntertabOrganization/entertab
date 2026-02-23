@@ -13,17 +13,17 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 md:py-24 bg-white">
+    <section id="projects" className="py-12 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <SectionTitle title="Projects" className="mb-4" />
+        <SectionTitle title="Projects" className="mb-2" />
 
-        <p className="text-center text-text-dark text-lg md:text-xl font-medium mt-4 mb-8">
+        <p className="text-center text-text-dark text-lg md:text-xl font-medium mt-2 mb-6">
           Your success starts with what we create together
         </p>
 
         {/* Button */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-8">
           <Button variant="outline" href="#projects">
             Explore all our work
           </Button>

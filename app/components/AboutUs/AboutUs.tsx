@@ -2,12 +2,12 @@ import SectionTitle from "../ui/SectionTitle";
 
 export default function AboutUs() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-mint/40">
+    <section id="about" className="py-12 md:py-16 bg-mint/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <SectionTitle title="About Us" className="mb-12 md:mb-16" />
+        <SectionTitle title="About Us" className="mb-8 md:mb-12" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left Content */}
           <div>
             <h3 className="text-2xl md:text-3xl font-bold text-text-dark mb-6">

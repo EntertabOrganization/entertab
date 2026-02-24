@@ -15,7 +15,12 @@ export default function Header() {
 
   return (
     <header className="absolute top-0 left-0 w-full z-50 backdrop-blur-sm">
-      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-[-200px] left-[-300px] h-[201px] w-[425px] bg-primary blur-3xl"
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center shrink-0">

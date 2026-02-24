@@ -8,7 +8,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[110vh] pt-12 overflow-hidden bg-gradient-to-br from-white via-white to-mint-subtle"
+      className="relative min-h-[110vh] pt-12 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(to bottom left, rgba(83, 190, 147, 0.5) 0%, #FFFFFF 40.3846%)",
+      }}
     >
       <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start lg:items-center">

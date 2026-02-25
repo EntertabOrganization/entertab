@@ -1,10 +1,16 @@
+import Image from "next/image";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["600"] });
+const poppinsMedium = Poppins({ subsets: ["latin"], weight: ["500"] });
+
 interface ProcessCardProps {
   number: string;
   titleBlack: string;
   titleGreen: string;
   description: string;
-  hasImage: boolean;
-  imageLabel?: string;
+  imageSrc: string;
+  imageAlt: string;
 }
 
 export default function ProcessCard({
@@ -12,35 +18,45 @@ export default function ProcessCard({
   titleBlack,
   titleGreen,
   description,
-  hasImage,
-  imageLabel,
+  imageSrc,
+  imageAlt,
 }: ProcessCardProps) {
   return (
     <div className="flex flex-col h-full">
+      {/* Image */}
+      <div className="relative w-full h-[360px] md:h-[420px] rounded-[30px] overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          className="object-cover"
+          sizes="(min-width: 768px) 500px, 100vw"
+        />
+      </div>
+
       {/* Number + Title */}
-      <div className="mb-3">
-        <span className="text-primary font-semibold text-lg mr-2">
+      <div className="mb-3 mt-4 flex items-center">
+        <span className="text-primary font-semibold text-[30px] mr-2">
           {number}
         </span>
-        <span className="text-text-dark font-bold text-xl md:text-2xl">
+        <span
+          className={`${poppins.className} text-text-dark font-semibold text-[30px] leading-[38px]`}
+        >
           {titleBlack}
         </span>{" "}
-        <span className="text-primary font-bold text-xl md:text-2xl">
+        <span
+          className={`${poppins.className} text-primary font-semibold text-[30px] leading-[38px]`}
+        >
           {titleGreen}
         </span>
       </div>
 
       {/* Description */}
-      <p className="text-text-gray text-sm md:text-base leading-relaxed mb-4">
+      <p
+        className={`${poppinsMedium.className} text-text-gray font-medium text-[18px] leading-[28px] mb-4`}
+      >
         {description}
       </p>
-
-      {/* Image Placeholder */}
-      {hasImage && (
-        <div className="w-full h-[220px] md:h-[280px] img-placeholder rounded-xl mt-auto text-sm">
-          {imageLabel || "Process Image"}
-        </div>
-      )}
     </div>
   );
 }

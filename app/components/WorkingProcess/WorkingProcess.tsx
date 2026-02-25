@@ -1,5 +1,8 @@
 import SectionTitle from "../ui/SectionTitle";
 import ProcessCard from "./ProcessCard";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 const processSteps = [
   {
@@ -8,8 +11,8 @@ const processSteps = [
     titleGreen: "Analysis",
     description:
       "We begin by deeply understanding your vision, goals, and challenges, conducting thorough research to align our solutions with your business needs",
-    hasImage: true,
-    imageLabel: "Listening & Analysis Image",
+    imageSrc: "/service1.png",
+    imageAlt: "Listening & Analysis",
   },
   {
     number: "02",
@@ -17,8 +20,8 @@ const processSteps = [
     titleGreen: "Planning",
     description:
       "Our experts craft a data-driven strategy, combining market insights, technology, and innovation to build a strong foundation for your brand.",
-    hasImage: true,
-    imageLabel: "Strategic Planning Image",
+    imageSrc: "/service2.png",
+    imageAlt: "Strategic Planning",
   },
   {
     number: "03",
@@ -26,7 +29,8 @@ const processSteps = [
     titleGreen: "Growth",
     description:
       "We begin by deeply understanding your vision, goals, and challenges, conducting thorough research to align our solutions with your business needs",
-    hasImage: false,
+    imageSrc: "/service3.png",
+    imageAlt: "Optimization & Growth",
   },
   {
     number: "04",
@@ -34,7 +38,8 @@ const processSteps = [
     titleGreen: "Implementation",
     description:
       "Our team of skilled developers, designers, and marketers bring the strategy to life, ensuring precision, quality, and seamless integration.",
-    hasImage: false,
+    imageSrc: "/service4.png",
+    imageAlt: "Execution & Implementation",
   },
 ];
 
@@ -44,7 +49,9 @@ export default function WorkingProcess() {
       <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle title="Working Process" className="mb-2" />
-        <h3 className="text-center text-2xl md:text-3xl font-bold text-text-dark mb-8 md:mb-12">
+        <h3
+          className={`${poppins.className} text-center text-text-dark font-normal text-[36px] leading-[44px] tracking-[-0.02em] mb-8 md:mb-12`}
+        >
           How We Work
         </h3>
     
@@ -57,8 +64,8 @@ export default function WorkingProcess() {
               titleBlack={step.titleBlack}
               titleGreen={step.titleGreen}
               description={step.description}
-              hasImage={step.hasImage}
-              imageLabel={step.imageLabel}
+              imageSrc={step.imageSrc}
+              imageAlt={step.imageAlt}
             />
           ))}
         </div>

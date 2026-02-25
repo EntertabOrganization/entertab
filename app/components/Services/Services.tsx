@@ -26,8 +26,8 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-12 md:py-16 bg-white">
-      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-12 md:py-16">
+      <div className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle title="Our Services" className="mb-5" />
 
@@ -63,9 +63,9 @@ export default function Services() {
               variant="primary"
               href="#about"
               showArrow={false}
-              className="w-[181px] h-[44px] px-4 py-[10px] !rounded-[12px] justify-center bg-[#65C59D] hover:bg-[#65C59D] border-0 hover:border-0 text-[16px]"
+              className="w-[210px] h-[44px] px-6 py-[10px] !rounded-[12px] justify-center bg-[#65C59D] hover:bg-[#65C59D] border-0 hover:border-0 text-[16px]"
             >
-              <span>More about us</span>
+              <span>Show All Services</span>
               <svg
                 width="15"
                 height="23"

@@ -8,9 +8,14 @@ export default function AboutUs() {
   return (
     <section
       id="about"
-      className={`mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 py-12 md:py-16 ${poppins.className}`}
+      className={`relative mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8 py-12 md:py-16 ${poppins.className}`}
     >
-      <div className="w-full">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[20px] top-0 h-[200px] w-[200px] rounded-full bg-primary opacity-30 blur-[80px]"
+      />
+
+      <div className="relative z-10 w-full">
         <SectionTitle title="About Us" className="mb-5" />
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">

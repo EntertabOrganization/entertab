@@ -14,7 +14,7 @@ export default function Hero() {
           "linear-gradient(to bottom left, rgba(83, 190, 147, 0.5) 0%, #FFFFFF 40.3846%)",
       }}
     >
-      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16">
+      <div className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start lg:items-center">
           {/* Left Content */}
           <div className="z-10 relative lg:col-span-8 lg:self-center">

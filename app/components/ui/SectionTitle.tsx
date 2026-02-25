@@ -11,8 +11,8 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <h2
-      className={`text-center text-xl md:text-2xl font-semibold italic text-primary tracking-wide ${
-        underline ? "underline underline-offset-4 decoration-primary" : ""
+      className={`mb-8 md:mb-12 text-center text-[36px] leading-[44px] tracking-[-0.02em] font-semibold text-[#54BF93] ${
+        underline ? "underline underline-offset-4 decoration-current" : ""
       } ${className}`}
     >
       {title}

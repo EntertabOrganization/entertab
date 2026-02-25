@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type GoToTopProps = {
   startFromId?: string;
@@ -12,6 +12,7 @@ export default function GoToTop({
   hideFromId = "footer",
 }: GoToTopProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const anchorRef = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
     const startEl = document.getElementById(startFromId);
@@ -32,16 +33,35 @@ export default function GoToTop({
     let startY = computeStartY();
     let hideY = computeHideY();
 
+    const computeFooterSafetyOffsetPx = () => {
+      const anchorEl = anchorRef.current;
+      if (!anchorEl) return 120;
+
+      const rect = anchorEl.getBoundingClientRect();
+      const styles = window.getComputedStyle(anchorEl);
+      const bottomPx = Number.parseFloat(styles.bottom || "0") || 0;
+
+      // Hide before the footer reaches the area occupied by the control.
+      return Math.ceil(rect.height + bottomPx);
+    };
+
+    let footerSafetyOffsetPx = computeFooterSafetyOffsetPx();
+
     const updateVisibility = () => {
       const viewportBottom = window.scrollY + window.innerHeight;
       const isPastStart = viewportBottom >= startY;
-      const isPastHide = hideY !== null ? viewportBottom >= hideY : false;
+
+      // Keep the control from visually overlapping the footer.
+      const safeViewportBottom = viewportBottom - footerSafetyOffsetPx;
+      const isPastHide =
+        hideY !== null ? safeViewportBottom >= hideY : false;
       setIsVisible(isPastStart && !isPastHide);
     };
 
     const handleResize = () => {
       startY = computeStartY();
       hideY = computeHideY();
+      footerSafetyOffsetPx = computeFooterSafetyOffsetPx();
       updateVisibility();
     };
 
@@ -60,6 +80,7 @@ export default function GoToTop({
 
   return (
     <a
+      ref={anchorRef}
       href="#home"
       className={`hidden lg:flex fixed bottom-8 right-6 flex-col items-center gap-2 text-primary hover:text-primary-light transition-colors z-[50000] ${
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"

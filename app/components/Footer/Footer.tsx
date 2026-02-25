@@ -54,6 +54,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer
+      id="footer"
       className="relative flex h-[480px] flex-col overflow-hidden text-white"
       style={{
         background:

@@ -1,8 +1,14 @@
+import Image from "next/image";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["500"] });
+
 interface TestimonialCardProps {
   quote: string;
   name: string;
   role: string;
   rating: number;
+  imageSrc: string;
 }
 
 export default function TestimonialCard({
@@ -10,9 +16,10 @@ export default function TestimonialCard({
   name,
   role,
   rating,
+  imageSrc,
 }: TestimonialCardProps) {
   return (
-    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-border-light/50">
+    <div className="w-[550px] h-[400px] bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-border-light/50 flex flex-col">
       {/* Stars */}
       <div className="flex gap-1 mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
@@ -30,14 +37,22 @@ export default function TestimonialCard({
       </div>
 
       {/* Quote */}
-      <p className="text-text-gray text-sm md:text-base leading-relaxed mb-6">
+      <p
+        className={`text-[#707072] font-medium not-italic text-[24px] leading-[32px] tracking-[0em] flex-1 min-h-0 overflow-hidden mb-6 ${poppins.className}`}
+      >
         {quote}
       </p>
 
       {/* Author */}
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full img-placeholder text-[10px]">
-          Pic
+      <div className="flex items-center gap-3 mt-auto">
+        <div className="relative w-10 h-10 rounded-[5px] overflow-hidden bg-white">
+          <Image
+            src={imageSrc}
+            alt={name}
+            fill
+            sizes="40px"
+            className="object-cover"
+          />
         </div>
         <div>
           <p className="font-semibold text-primary text-sm">{name}</p>

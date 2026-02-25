@@ -74,3 +74,25 @@ body {
   text-align: center;
   overflow: hidden;
 }
+
+@keyframes testimonialBlurIn {
+  0% {
+    filter: blur(10px);
+    opacity: 0.25;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.testimonial-blur-enter {
+  animation: testimonialBlurIn 3s ease;
+  will-change: filter, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-blur-enter {
+    animation: none;
+  }
+}

@@ -19,11 +19,11 @@ export default function Hero() {
           {/* Left Content */}
           <div className="z-10 relative lg:col-span-8 lg:self-center">
             <h1
-              className={`${poppins.className} text-[60px] leading-[72px] tracking-[-0.02em] font-normal text-gray-600`}
+              className={`${poppins.className} text-[32px] leading-[40px] sm:text-[44px] sm:leading-[54px] md:text-[52px] md:leading-[64px] lg:text-[60px] lg:leading-[72px] tracking-[-0.02em] font-normal text-gray-600`}
             >
               We are a full-service digital partner, delivering innovative
               digital solutions for
-              <br />
+              <br className="hidden md:block" />
               <span className="text-[#53BE93]">a smarter future.</span>
             </h1>
 
@@ -331,7 +331,7 @@ export default function Hero() {
           </div>
 
           {/* Right - Hero Image */}
-          <div className="relative flex items-center justify-center lg:justify-end lg:col-span-4 gap-[10px] mb-[315px]">
+          <div className="relative flex items-center justify-center lg:justify-end lg:col-span-4 gap-[10px] mb-0 lg:mb-[315px]">
             <div className="w-[376px] h-[636px] relative opacity-100 rotate-0">
               <svg
                 width="377"

@@ -24,7 +24,7 @@ export default function ProcessCard({
   return (
     <div className="flex flex-col h-full">
       {/* Image */}
-      <div className="relative w-full h-[360px] md:h-[420px] rounded-[30px] overflow-hidden">
+      <div className="relative w-full h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px] rounded-[30px] overflow-hidden">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -35,17 +35,17 @@ export default function ProcessCard({
       </div>
 
       {/* Number + Title */}
-      <div className="mb-3 mt-4 flex items-center">
-        <span className="text-primary font-semibold text-[30px] mr-2">
+      <div className="mb-3 mt-4 flex flex-wrap items-center gap-x-2 gap-y-1">
+        <span className="text-primary font-semibold text-[22px] sm:text-[26px] md:text-[30px] leading-[28px] sm:leading-[34px] md:leading-[38px]">
           {number}
         </span>
         <span
-          className={`${poppins.className} text-text-dark font-semibold text-[30px] leading-[38px]`}
+          className={`${poppins.className} text-text-dark font-semibold text-[22px] sm:text-[26px] md:text-[30px] leading-[28px] sm:leading-[34px] md:leading-[38px]`}
         >
           {titleBlack}
-        </span>{" "}
+        </span>
         <span
-          className={`${poppins.className} text-primary font-semibold text-[30px] leading-[38px]`}
+          className={`${poppins.className} text-primary font-semibold text-[22px] sm:text-[26px] md:text-[30px] leading-[28px] sm:leading-[34px] md:leading-[38px]`}
         >
           {titleGreen}
         </span>
@@ -53,7 +53,7 @@ export default function ProcessCard({
 
       {/* Description */}
       <p
-        className={`${poppinsMedium.className} text-text-gray font-medium text-[18px] leading-[28px] mb-4`}
+        className={`${poppinsMedium.className} text-text-gray font-medium text-[16px] sm:text-[17px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] mb-4`}
       >
         {description}
       </p>

@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[110vh] pt-12 overflow-hidden"
+      className="relative pt-12 overflow-hidden"
       style={{
         background:
           "linear-gradient(to bottom left, rgba(83, 190, 147, 0.5) 0%, #FFFFFF 40.3846%)",

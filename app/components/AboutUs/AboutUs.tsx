@@ -11,7 +11,7 @@ export default function AboutUs() {
       className={`mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 py-12 md:py-16 ${poppins.className}`}
     >
       <div className="w-full">
-        <SectionTitle title="About Us" className="mb-2" />
+        <SectionTitle title="About Us" className="mb-5" />
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left Content */}

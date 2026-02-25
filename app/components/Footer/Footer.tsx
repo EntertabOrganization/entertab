@@ -63,7 +63,7 @@ export default function Footer() {
       {/* Decorative background pattern */}
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-20px] right-[240px] opacity-30"
+        className="pointer-events-none absolute bottom-[-20px] right-[240px] opacity-100"
       >
         <svg
           width="229"

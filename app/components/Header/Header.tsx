@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Who we Are", href: "#about" },
+  { label: "Who we Are", href: "/who-we-are" },
   { label: "Services", href: "#services" },
   { label: "Our work", href: "#projects" },
   { label: "Career", href: "#career" },
@@ -82,13 +83,13 @@ export default function Header() {
           {/* Centered Navigation */}
           <nav className="hidden lg:flex items-center mx-auto">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-text-dark text-[20px] font-large hover:text-primary transition-colors duration-200 relative mr-12 last:mr-0 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -119,14 +120,14 @@ export default function Header() {
       >
         <div className="bg-white/95 backdrop-blur-sm border-t border-border-light px-4 py-4 space-y-1">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 py-3 text-text-dark text-[20px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <a
             href="#contact"

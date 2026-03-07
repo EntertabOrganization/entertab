@@ -79,8 +79,9 @@ export default function WhoWeArePage() {
                             className="relative w-full overflow-hidden"
                             style={{
                                 maxWidth: 1317,
-                                height: 563,
                                 borderRadius: 30,
+                                aspectRatio: "1317 / 563",
+                                minHeight: 200,
                             }}
                         >
                             <Image
@@ -91,29 +92,20 @@ export default function WhoWeArePage() {
                                 priority
                             />
                             {/* Overlay: Heading */}
-                            <div className="absolute top-8 left-8">
+                            <div className="absolute top-4 sm:top-8 left-4 sm:left-8 right-4 sm:right-auto">
                                 <h2
-                                    style={{
-                                        fontFamily: "'Poppins', sans-serif",
-                                        fontWeight: 400,
-                                        fontSize: 60,
-                                        lineHeight: "72px",
-                                        letterSpacing: "-0.02em",
-                                        color: "#FFFFFF",
-                                        textAlign: "left",
-                                        width: 705,
-                                        height: 216,
-                                    }}
+                                    className="text-white font-normal text-2xl sm:text-4xl lg:text-[60px] leading-tight lg:leading-[72px] tracking-tight max-w-[705px]"
+                                    style={{ fontFamily: "'Poppins', sans-serif" }}
                                 >
                                     Where innovation fuels brands and accelerates growth
                                 </h2>
                             </div>
                             {/* Overlay: CTA Button — bottom left */}
-                            <div className="absolute bottom-8 left-8">
+                            <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8">
                                 <Button
                                     href="#contact"
                                     showArrow={true}
-                                    className="w-[181px] h-[44px] px-4 py-[10px] !rounded-[12px] justify-center bg-[#606063] hover:bg-[#606063] border-0 hover:border-0 text-[16px]"
+                                    className="w-[140px] sm:w-[181px] h-[38px] sm:h-[44px] px-3 sm:px-4 py-[8px] sm:py-[10px] !rounded-[12px] justify-center bg-[#606063] hover:bg-[#606063] border-0 hover:border-0 text-[14px] sm:text-[16px]"
                                 >
                                     Get in Touch
                                 </Button>
@@ -123,12 +115,12 @@ export default function WhoWeArePage() {
                 </section>
 
                 {/* About Section */}
-                <section className="relative mx-auto w-full max-w-8xl px-2 sm:px-4 lg:px-6 py-8 md:py-16 mb-7">
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <section className="relative mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8 py-8 md:py-16 mb-7">
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
                         {/* Left: Who We Are box (~col-4) */}
-                        <div className="flex items-start justify-center">
-                            <div className="px-8 py-6 inline-block">
-                                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 55, lineHeight: "44px", letterSpacing: "-0.02em", textAlign: "center", color: "#54BF93", display: "block" }}>
+                        <div className="flex items-start justify-center lg:justify-start">
+                            <div className="px-4 sm:px-8 py-4 sm:py-6 inline-block">
+                                <span className="block text-4xl sm:text-5xl lg:text-[55px] font-semibold text-[#54BF93] text-center lg:text-left" style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "-0.02em" }}>
                                     Who we are
                                 </span>
                             </div>
@@ -136,12 +128,12 @@ export default function WhoWeArePage() {
 
                         {/* Right: Description (~col-8) */}
                         <div className="lg:col-span-2 space-y-3">
-                            <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500, fontSize: 24, lineHeight: "32px", letterSpacing: 0, color: "#707072" }}>
+                            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
                                 Entertab is a leading digital solutions provider founded in 2015
                                 and serving B2B and B2C enterprises from the Washington, D.C.
                                 metropolitan area.
                             </p>
-                            <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500, fontSize: 24, lineHeight: "32px", letterSpacing: 0, color: "#707072" }}>
+                            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
                                 As a strategic creative and technology partner, we are committed
                                 to transforming businesses. Our mission is clear: to deliver
                                 innovative digital platforms and cutting-edge experiences that
@@ -155,30 +147,30 @@ export default function WhoWeArePage() {
                 {/* Stats */}
                 <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
                     {/* Track record header */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-14">
-                        <h2 className="lg:col-span-5 text-4xl font-semibold text-primary leading-snug flex justify-center lg:justify-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center mb-10 lg:mb-14">
+                        <h2 className="lg:col-span-5 text-2xl sm:text-3xl md:text-4xl font-semibold text-primary leading-snug text-center lg:text-left">
                             Our track record tells the story
                         </h2>
-                        <p className="lg:col-span-7" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500, fontSize: 24, lineHeight: "32px", letterSpacing: 0, color: "#707072" }}>
+                        <p className="lg:col-span-7 text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed text-center lg:text-left" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
                             Data-driven results ensuring quality across our worldwide operations.
                         </p>
                     </div>
 
                     {/* Stat items */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-10">
                         {[
                             { value: "5+", label: "Our branches", sub: "Local and global offices" },
                             { value: "25+", label: "Our success partners", sub: "Brands that trust us." },
                             { value: "200+", label: "Our Client Visions Realized", sub: "Experience you can count on" },
                         ].map((stat) => (
-                            <div key={stat.label}>
-                                <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: 72, lineHeight: "80px", letterSpacing: 0, color: "#54BF93" }}>
+                            <div key={stat.label} className="text-center sm:text-left">
+                                <p className="text-5xl sm:text-6xl lg:text-[72px] font-bold leading-none sm:leading-[80px]" style={{ fontFamily: "Poppins, sans-serif", color: "#54BF93" }}>
                                     {stat.value}
                                 </p>
-                                <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: 36, lineHeight: "44px", letterSpacing: "-0.02em", color: "#606063" }}>
+                                <p className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-normal mt-2" style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "-0.02em", lineHeight: "44px", color: "#606063" }}>
                                     {stat.label}
                                 </p>
-                                <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, fontSize: 24, lineHeight: "32px", letterSpacing: 0, color: "#606063" }}>{stat.sub}</p>
+                                <p className="text-base sm:text-lg lg:text-2xl font-normal" style={{ fontFamily: "Poppins, sans-serif", color: "#606063" }}>{stat.sub}</p>
                             </div>
                         ))}
                     </div>
@@ -188,8 +180,8 @@ export default function WhoWeArePage() {
                 <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
                     <div className="overflow-hidden">
                         {/* Header */}
-                        <div className="px-10 pt-8 pb-6">
-                            <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 36, lineHeight: "44px", letterSpacing: "-0.02em", color: "#54BF93", display: "block" }}>
+                        <div className="px-4 sm:px-10 pt-8 pb-6">
+                            <span className="block text-2xl sm:text-3xl lg:text-[36px] font-semibold" style={{ fontFamily: "Poppins, sans-serif", lineHeight: "44px", letterSpacing: "-0.02em", color: "#54BF93" }}>
                                 Our Core Beliefs
                             </span>
                         </div>
@@ -197,14 +189,14 @@ export default function WhoWeArePage() {
                         {beliefs.map((belief, index) => (
                             <div
                                 key={belief.title}
-                                className={`grid grid-cols-1 lg:grid-cols-3 gap-8 items-center px-10 py-12${index < beliefs.length - 1
+                                className={`grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-center px-4 sm:px-10 py-8 sm:py-12${index < beliefs.length - 1
                                     ? " border-b-2 border-primary"
                                     : ""
                                     }`}
                             >
                                 {/* Left: Title + Arrow (~col-4) */}
-                                <div className="flex items-center gap-4">
-                                    <h3 className="text-5xl sm:text-6xl font-bold text-[#1E1E1F] leading-none">
+                                <div className="flex items-center gap-3 sm:gap-4">
+                                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1E1E1F] leading-none">
                                         {belief.title}
                                     </h3>
                                     <svg className="mb-9" width="44" height="75" viewBox="0 0 44 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,7 +223,7 @@ export default function WhoWeArePage() {
                                     </svg>
                                 </div>
                                 {/* Right: Description (~col-8) */}
-                                <p className="lg:col-span-2" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500, fontSize: 24, lineHeight: "32px", letterSpacing: 0, color: "#707072" }}>
+                                <p className="lg:col-span-2 text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
                                     {belief.description}
                                 </p>
                             </div>
@@ -247,9 +239,9 @@ export default function WhoWeArePage() {
                             "linear-gradient(to bottom left, rgba(83, 190, 147, 0.5) 0%, #FFFFFF 40.3846%)",
                     }}
                 >
-                    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16 flex flex-row items-center justify-center gap-8">
+                    <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16 flex flex-row items-center justify-center gap-8">
                         {/* Left SVG */}
-                        <div className="hidden lg:flex shrink-0 items-center" style={{ position: "absolute", right: "170px", top: "-15px" }}>
+                        <div className="hidden xl:flex shrink-0 items-center" style={{ position: "absolute", right: "170px", top: "-15px" }}>
                             <svg width="78" height="124" viewBox="0 0 78 124" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M35.7449 62.988C39.3091 65.2278 42.3288 67.165 45.3878 69.0381C53.0186 73.7193 60.6585 78.3882 68.3196 83.0205C73.197 85.9722 75.8143 90.2317 76.0049 96.0007C76.1198 99.5268 76.3438 103.044 76.4587 106.57C76.6524 112.571 74.2923 117.323 69.1365 120.335C64.2258 123.202 59.1426 123.14 54.2349 120.14C40.9824 112.03 27.6753 104.012 14.5438 95.7134C6.13232 90.4028 1.80556 82.3727 1.21555 72.4298C0.822205 65.8145 0.434916 59.1594 0.72841 52.5532C1.09452 44.3886 4.74957 37.5258 11.2064 32.5818C24.0415 22.7459 36.9642 13.023 50.0383 3.51092C59.4755 -3.35194 72.0654 2.73174 73.0881 14.4438C73.4118 18.1625 73.4118 21.9025 73.6388 25.6304C73.9988 31.5246 71.7084 36.0285 67.0034 39.4936C57.7992 46.2739 48.6737 53.1643 39.524 60.0119C38.3893 60.8583 37.294 61.7628 35.7449 62.988Z" stroke="#FDFDFD" strokeWidth="1.25" strokeMiterlimit="10" />
                                 <path d="M54.1219 120.14C40.804 112.05 31.7977 106.778 18.5984 98.5016C4.93691 83.8108 35.5346 63.1443 35.5346 63.1443C35.5346 63.1443 42.151 67.3099 45.2251 69.1809C52.8996 73.8463 60.5711 78.5025 68.2699 83.1221C73.1714 86.0688 75.8015 90.3136 75.9931 96.0699C76.1117 99.5803 76.3336 103.094 76.4492 106.604C76.6438 112.595 74.2721 117.327 69.0909 120.332C66.6766 121.728 64.2229 122.429 61.766 122.429C59.2028 122.432 56.6426 121.667 54.1219 120.14Z" stroke="#FDFDFD" strokeWidth="1.25" strokeMiterlimit="10" />
@@ -259,31 +251,21 @@ export default function WhoWeArePage() {
                         {/* Center: Text */}
                         <div className="flex flex-col items-center text-center">
                             <h3
+                                className="text-2xl sm:text-3xl lg:text-[40px] font-semibold text-center leading-snug lg:leading-[44px] max-w-xs"
                                 style={{
                                     fontFamily: "Poppins, sans-serif",
-                                    fontWeight: 600,
-                                    fontSize: 40,
-                                    lineHeight: "44px",
                                     letterSpacing: "-0.02em",
-                                    textAlign: "center",
                                     color: "#54BF93",
-                                    width: 300,
-                                    height: 88,
                                 }}
                             >
                                 Our clients are trustworthy
                             </h3>
 
                             <p
+                                className="text-base sm:text-lg lg:text-2xl font-normal text-center leading-relaxed mt-4"
                                 style={{
                                     fontFamily: "Poppins, sans-serif",
-                                    fontWeight: 400,
-                                    fontSize: 24,
-                                    lineHeight: "32px",
-                                    letterSpacing: 0,
-                                    textAlign: "center",
                                     color: "#707072",
-                                    marginTop: 18,
                                 }}
                             >
                                 Globally recognized for our creative excellence in building integrated digital solutions. We deliver strategies that not only set industry standards but also guarantee a measurable, tangible impact in diverse markets worldwide.
@@ -291,7 +273,7 @@ export default function WhoWeArePage() {
                         </div>
 
                         {/* Right SVG */}
-                        <div className="hidden lg:flex shrink-0 items-center" style={{ position: "absolute", right: "55px", top: "25px" }}>
+                        <div className="hidden xl:flex shrink-0 items-center" style={{ position: "absolute", right: "55px", top: "25px" }}>
                             <svg width="115" height="183" viewBox="0 0 115 183" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M61.496 89.326C56.1937 85.994 51.7015 83.1121 47.1508 80.3256C35.7989 73.3617 24.4335 66.416 13.0366 59.5249C5.78071 55.1338 1.88722 48.7972 1.60364 40.2151C1.4326 34.9694 1.09952 29.7374 0.928471 24.4917C0.640397 15.5641 4.1513 8.49571 11.8213 4.01373C19.1266 -0.250068 26.6886 -0.159163 33.9895 4.30464C53.7045 16.3687 73.5006 28.2964 93.0356 40.6423C105.549 48.5426 111.985 60.4885 112.863 75.28C113.448 85.1212 114.025 95.0216 113.588 104.849C113.043 116.995 107.606 127.205 98.0004 134.559C78.9065 149.192 59.6821 163.656 40.2326 177.806C26.1935 188.016 7.46415 178.966 5.94276 161.542C5.46114 156.01 5.46113 150.446 5.12354 144.901C4.58791 136.132 7.99529 129.432 14.9946 124.277C28.6871 114.191 42.2626 103.94 55.8741 93.7534C57.562 92.4942 59.1914 91.1487 61.496 89.326Z" stroke="#FDFDFD" strokeWidth="1.5" strokeMiterlimit="10" />
                                 <path d="M34.1576 4.30431C53.9698 16.34 67.368 24.1824 87.0038 36.4946C107.327 58.3492 61.8088 89.0935 61.8088 89.0935C61.8088 89.0935 51.966 82.8966 47.3929 80.1132C35.976 73.1728 24.5636 66.2461 13.1105 59.3737C5.81884 54.9901 1.90615 48.6754 1.62118 40.1121C1.44477 34.8899 1.11456 29.6631 0.942675 24.4408C0.653181 15.5285 4.18139 8.48846 11.8892 4.01871C15.4807 1.9425 19.131 0.899862 22.7859 0.899862C26.5991 0.895329 30.4077 2.03317 34.1576 4.30431Z" stroke="#FDFDFD" strokeWidth="1.5" strokeMiterlimit="10" />
@@ -313,8 +295,8 @@ export default function WhoWeArePage() {
                             <div key={setIndex} className="flex shrink-0">
                                 {/* Card 1 */}
                                 <div
-                                    className="inline-flex items-center justify-center shrink-0 mx-4 border-2 border-gray-300 p-4"
-                                    style={{ width: 236, height: 236 }}
+                                    className="inline-flex items-center justify-center shrink-0 mx-2 sm:mx-4 border-2 border-gray-300 p-2 sm:p-4"
+                                    style={{ width: "clamp(150px, 20vw, 236px)", height: "clamp(150px, 20vw, 236px)" }}
                                 >
                                     <svg width="153" height="149" viewBox="0 0 153 149" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g opacity="0.8">
@@ -336,8 +318,8 @@ export default function WhoWeArePage() {
 
                                 {/* Card 2 */}
                                 <div
-                                    className="inline-flex items-center justify-center shrink-0 mx-4 border-2 border-gray-300 p-4"
-                                    style={{ width: 236, height: 236 }}
+                                    className="inline-flex items-center justify-center shrink-0 mx-2 sm:mx-4 border-2 border-gray-300 p-2 sm:p-4"
+                                    style={{ width: "clamp(150px, 20vw, 236px)", height: "clamp(150px, 20vw, 236px)" }}
                                 >
                                     <svg width="160" height="154" viewBox="0 0 160 154" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M81.0792 62.1867C81.3292 62.2064 81.5791 62.1735 81.8357 62.2459C82.0988 62.3182 82.3224 62.4498 82.5198 62.6142C82.6842 62.7524 82.8158 62.9431 82.9605 63.1076C83.0065 63.1602 83.0526 63.2062 83.0986 63.2523C83.4143 63.5483 83.7367 63.8377 84.0458 64.1403C84.4405 64.5218 84.822 64.9099 85.2035 65.298C85.6771 65.7848 86.1376 66.2781 86.6112 66.7648C86.7953 66.9556 87.019 67.1069 87.2032 67.2976C87.4268 67.5344 87.5913 67.8107 87.5584 68.1528C87.5452 68.3172 87.5715 68.4751 87.5123 68.6461C87.4268 68.8895 87.2229 69.0079 87.0453 69.1394C86.7164 69.3762 86.3612 69.5736 86.0192 69.7906C85.368 70.2116 84.7036 70.6195 84.0195 70.9944C83.4341 71.3167 82.8223 71.6061 82.2961 72.0271C82.0922 72.1916 81.9014 72.3757 81.737 72.5797C81.5397 72.8296 81.2963 73.0006 80.9937 73.0138C80.7503 73.0269 80.4938 72.9349 80.2833 72.8033C80.0333 72.6454 79.7834 72.481 79.586 72.2508C79.2966 71.9219 78.9217 71.6982 78.5468 71.5009C77.9548 71.1983 77.4285 70.8102 76.9154 70.3892C76.2774 69.8696 75.6328 69.3631 74.9158 68.9421C74.6724 68.7974 74.4224 68.6527 74.1856 68.4948C73.8765 68.2843 73.8041 67.9752 73.7055 67.666C73.8041 67.3042 73.8304 66.9161 74.2317 66.6991C74.6921 66.4491 75.1263 66.1465 75.5407 65.8111C76.2116 65.2651 76.9023 64.7455 77.6653 64.3179C78.1587 64.035 78.6257 63.693 79.0467 63.3115C79.3887 63.0023 79.7373 62.6932 80.0925 62.3972C80.2438 62.2722 80.4214 62.1735 80.6319 62.1933C80.7898 62.1933 80.9345 62.1867 81.0792 62.1867ZM79.0993 65.5808C78.5796 65.9492 78.06 66.311 77.5338 66.6662C77.0865 66.9622 76.6918 67.3108 76.3234 67.7121C77.6851 68.8829 79.0401 70.0538 80.724 70.8036C82.2632 70.1722 83.6972 69.3105 85.0325 68.212C85.0128 68.133 84.9996 68.0541 84.9667 67.9883C84.822 67.666 84.6049 67.3832 84.3681 67.1266C84.0327 66.7583 83.684 66.4031 83.3486 66.0347C83.1249 65.7913 82.9342 65.5216 82.7105 65.2783C82.5987 65.1599 82.4606 65.0612 82.329 64.9625C81.9935 64.6994 81.6581 64.4363 81.3292 64.1798L79.0993 65.5808Z" fill="#49494B" />
@@ -391,8 +373,8 @@ export default function WhoWeArePage() {
 
                                 {/* Card 3 */}
                                 <div
-                                    className="inline-flex items-center justify-center shrink-0 mx-4 border-2 border-gray-300 p-4"
-                                    style={{ width: 236, height: 236 }}
+                                    className="inline-flex items-center justify-center shrink-0 mx-2 sm:mx-4 border-2 border-gray-300 p-2 sm:p-4"
+                                    style={{ width: "clamp(150px, 20vw, 236px)", height: "clamp(150px, 20vw, 236px)" }}
                                 >
                                     <svg width="201" height="64" viewBox="0 0 201 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M52.3786 0H4.96551C2.21453 0 0 2.2284 0 4.9966V52.7065C0 55.4608 2.21453 57.7031 4.96551 57.7031H52.3786C55.1158 57.7031 57.3441 55.4747 57.3441 52.7065V4.9966C57.3441 2.2284 55.1158 0 52.3786 0ZM52.6399 51.0594C52.6399 52.1667 51.7458 53.0802 50.6317 53.0802H17.1661C16.0657 53.0802 15.1579 52.1805 15.1579 51.0594V16.6645C15.1579 15.5573 16.0519 14.6438 17.1661 14.6438H39.8204C40.9208 14.6438 41.8286 15.5434 41.8286 16.6645V41.0247C41.8286 42.132 40.9345 43.0455 39.8204 43.0455H27.9224C26.822 43.0455 25.9142 42.1458 25.9142 41.0247V34.6717C25.9142 33.5644 26.8082 32.6509 27.9224 32.6509H28.8852C29.9856 32.6509 30.8934 33.5506 30.8934 34.6717V36.0281C30.8934 37.1354 31.7875 38.0489 32.9017 38.0489H34.8686C35.969 38.0489 36.8768 37.1492 36.8768 36.0281V21.6611C36.8768 20.5539 35.9827 19.6404 34.8686 19.6404H22.1453C21.045 19.6404 20.1371 20.54 20.1371 21.6611V46.0628C20.1371 47.1701 21.0312 48.0836 22.1453 48.0836H45.6799C46.7803 48.0836 47.6881 47.1839 47.6881 46.0628V11.6403C47.6881 10.533 46.7941 9.61948 45.6799 9.61948H11.4578C10.3574 9.61948 9.4496 10.5191 9.4496 11.6403V51.0732C9.4496 52.1805 8.55553 53.094 7.44139 53.094H6.47855C5.37816 53.094 4.47033 52.1944 4.47033 51.0732V6.62983C4.47033 5.52255 5.3644 4.60905 6.47855 4.60905H50.6317C51.7321 4.60905 52.6399 5.50871 52.6399 6.62983V51.0594ZM26.0105 26.7131C26.0105 25.3013 27.1521 24.1525 28.5551 24.1525C29.9581 24.1525 31.0998 25.3013 31.0998 26.7131C31.0998 28.1249 29.9581 29.2737 28.5551 29.2737C27.1521 29.2737 26.0105 28.1387 26.0105 26.7131Z" fill="#49494B" />
@@ -443,8 +425,8 @@ export default function WhoWeArePage() {
 
                                 {/* Card 4 */}
                                 <div
-                                    className="inline-flex items-center justify-center shrink-0 mx-4 border-2 border-gray-300 p-4"
-                                    style={{ width: 236, height: 236 }}
+                                    className="inline-flex items-center justify-center shrink-0 mx-2 sm:mx-4 border-2 border-gray-300 p-2 sm:p-4"
+                                    style={{ width: "clamp(150px, 20vw, 236px)", height: "clamp(150px, 20vw, 236px)" }}
                                 >
                                     <svg width="147" height="89" viewBox="0 0 147 89" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M62.3811 81.7459C62.1017 81.5164 61.6699 81.4017 61.1238 81.4017C60.819 81.4017 60.5269 81.4017 60.2221 81.4399C60.1205 81.4654 60.0316 81.5037 59.9681 81.5674C59.9046 81.6567 59.8665 81.7331 59.8665 81.8224V85.7108C59.8665 85.7746 59.9046 85.8383 59.9554 85.8765C59.9935 85.9148 60.057 85.9403 60.1332 85.9403C60.1967 85.9403 60.2602 85.9148 60.2983 85.8765C60.3364 85.8383 60.3872 85.7746 60.3872 85.7108V84.2319C60.3872 84.2064 60.3872 84.1937 60.4253 84.1937C60.6793 84.2192 60.9206 84.2192 61.1365 84.2192C61.6953 84.2192 62.1017 84.1172 62.3938 83.8495C62.6986 83.62 62.8256 83.2503 62.8256 82.7531C62.8002 82.3196 62.6732 81.9754 62.3811 81.7459ZM62.0128 83.569C61.7969 83.7475 61.4794 83.824 61.073 83.824C60.8317 83.824 60.6031 83.7985 60.4126 83.7857C60.3745 83.7857 60.3745 83.7602 60.3745 83.722V81.9244C60.3745 81.8861 60.3745 81.8606 60.4126 81.8606C60.6285 81.8224 60.8571 81.7969 61.073 81.7969C61.4794 81.7969 61.7969 81.8861 62.0128 82.0519C62.2287 82.2304 62.3303 82.4853 62.3303 82.8041C62.3303 83.1355 62.2287 83.3778 62.0128 83.569Z" fill="#49494B" />

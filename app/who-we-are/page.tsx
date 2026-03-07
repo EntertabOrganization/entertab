@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import SectionTitle from "../components/ui/SectionTitle";
 import Button from "../components/ui/Button";
+import ArrowIcon from "../components/ui/ArrowIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +14,24 @@ export const metadata: Metadata = {
 };
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "700"] });
+
+const beliefs = [
+    {
+        title: "Insight",
+        description:
+            "We prioritize deep human and market understanding. This continuous quest for true insight fuels innovation, ensuring every solution we deliver is highly relevant and impactful.",
+    },
+    {
+        title: "Innovation",
+        description:
+            "We empower you to harness technology's momentum, specializing in the design and creation of cutting-edge digital products. Our deep understanding of market evolution allows us to move proactively, guaranteeing your brand is always positioned to exceed consumer expectations and remain firmly at the forefront of innovation.",
+    },
+    {
+        title: "Growth",
+        description:
+            "Growth is our ultimate benchmark. We don't just deliver projects; we engineer digital strategies and solutions that produce measurable, sustainable expansion for your business. Our focus is on long-term performance, ensuring your investment today accelerates your success well into the future.",
+    },
+];
 
 const values = [
     {
@@ -104,132 +123,109 @@ export default function WhoWeArePage() {
                 </section>
 
                 {/* About Section */}
-                <section className="relative mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                    <div
-                        aria-hidden="true"
-                        className="pointer-events-none absolute left-[20px] top-0 h-[200px] w-[200px] rounded-full bg-primary opacity-20 blur-[80px]"
-                    />
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <SectionTitle title="About EnterTab" className="mb-5" />
-                            <h2 className="text-3xl sm:text-4xl font-semibold leading-tight text-[#1E1E1F] mb-6">
-                                Building Digital Solutions Since 2015
-                            </h2>
-                            <div className="space-y-4 text-[#707072] text-lg leading-relaxed">
-                                <p>
-                                    Founded in 2015, EnterTab is a leading digital solutions
-                                    provider based in the Washington, D.C. area. We serve B2B and
-                                    B2C clients across the globe with web development, mobile apps,
-                                    UI/UX design, branding, and digital marketing.
-                                </p>
-                                <p>
-                                    We build scalable, data-driven solutions that enhance
-                                    engagement and streamline operations — helping businesses of all
-                                    sizes grow, modernize, and stay competitive in an ever-evolving
-                                    digital landscape.
-                                </p>
-                                <p>
-                                    At EnterTab, we leverage AI automation and advanced contact
-                                    center systems to boost efficiency and elevate the customer
-                                    experience. Our team of experts is committed to delivering
-                                    measurable results through every project we undertake.
-                                </p>
+                <section className="relative mx-auto w-full max-w-8xl px-2 sm:px-4 lg:px-6 py-8 md:py-16 mb-7">
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                        {/* Left: Who We Are box (~col-4) */}
+                        <div className="flex items-start justify-center">
+                            <div className="px-8 py-6 inline-block">
+                                <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 55, lineHeight: "44px", letterSpacing: "-0.02em", textAlign: "center", color: "#54BF93", display: "block" }}>
+                                    Who we are
+                                </span>
                             </div>
                         </div>
-                        <div className="relative w-full overflow-hidden rounded-2xl aspect-[520/360] shadow-xl">
-                            <Image
-                                src="/AboutUs.jpg"
-                                alt="The EnterTab team"
-                                fill
-                                className="object-cover"
-                            />
+                        
+                        {/* Right: Description (~col-8) */}
+                        <div className="lg:col-span-2 space-y-3">
+                            <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500, fontSize: 24, lineHeight: "32px", letterSpacing: 0, color: "#707072" }}>
+                                Entertab is a leading digital solutions provider founded in 2015
+                                and serving B2B and B2C enterprises from the Washington, D.C.
+                                metropolitan area.
+                            </p>
+                            <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500, fontSize: 24, lineHeight: "32px", letterSpacing: 0, color: "#707072" }}>
+                                As a strategic creative and technology partner, we are committed
+                                to transforming businesses. Our mission is clear: to deliver
+                                innovative digital platforms and cutting-edge experiences that
+                                accelerate your immediate growth and solidify your long-term
+                                success.
+                            </p>
                         </div>
                     </div>
                 </section>
 
-                {/* Mission & Vision */}
-                <section className="bg-[#F7F9F8] py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-                    <div className="mx-auto max-w-[96rem]">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                            <div className="bg-white rounded-2xl p-10 shadow-sm border border-[#E8EDE9]">
-                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                                    <span className="text-2xl">🎯</span>
-                                </div>
-                                <h3 className="text-2xl font-semibold text-[#1E1E1F] mb-4">
-                                    Our Mission
-                                </h3>
-                                <p className="text-[#707072] text-lg leading-relaxed">
-                                    To empower businesses through innovative, reliable, and
-                                    scalable digital solutions — enabling them to reach their full
-                                    potential in the digital economy.
-                                </p>
-                            </div>
-                            <div className="bg-white rounded-2xl p-10 shadow-sm border border-[#E8EDE9]">
-                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                                    <span className="text-2xl">🔭</span>
-                                </div>
-                                <h3 className="text-2xl font-semibold text-[#1E1E1F] mb-4">
-                                    Our Vision
-                                </h3>
-                                <p className="text-[#707072] text-lg leading-relaxed">
-                                    To be the most trusted digital transformation partner for
-                                    businesses worldwide — setting the standard for excellence,
-                                    creativity, and impact in the industry.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Values */}
-                <section className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                    <div className="text-center mb-14">
-                        <SectionTitle title="Our Values" className="mb-4 justify-center" />
-                        <h2 className="text-3xl sm:text-4xl font-semibold text-[#1E1E1F]">
-                            The Principles That Guide Us
+                {/* Stats */}
+                <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+                    {/* Track record header */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-14">
+                        <h2 className="text-2xl sm:text-3xl font-semibold text-primary leading-snug">
+                            Our track record tells the story
                         </h2>
+                        <p className="text-[#707072] text-base leading-relaxed">
+                            Data-driven results ensuring quality across our worldwide operations.
+                        </p>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {values.map((value) => (
-                            <div
-                                key={value.title}
-                                className="rounded-2xl border border-[#E8EDE9] bg-white p-8 hover:shadow-md transition-shadow duration-300"
-                            >
-                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 text-2xl">
-                                    {value.icon}
-                                </div>
-                                <h3 className="text-xl font-semibold text-[#1E1E1F] mb-3">
-                                    {value.title}
-                                </h3>
-                                <p className="text-[#707072] leading-relaxed">
-                                    {value.description}
+                    {/* Stat items */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+                        {[
+                            { value: "5+", label: "Our branches", sub: "Local and global offices" },
+                            { value: "25+", label: "Our success partners", sub: "Brands that trust us." },
+                            { value: "200+", label: "Our Client Visions Realized", sub: "Experience you can count on" },
+                        ].map((stat) => (
+                            <div key={stat.label}>
+                                <p className="text-5xl sm:text-6xl font-bold text-primary mb-2">
+                                    {stat.value}
                                 </p>
+                                <p className="text-[#1E1E1F] font-semibold text-lg mb-1">
+                                    {stat.label}
+                                </p>
+                                <p className="text-[#707072] text-sm">{stat.sub}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                {/* Stats */}
-                <section className="bg-[#1E1E1F] text-white py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-                    <div className="mx-auto max-w-[96rem]">
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                            {[
-                                { value: "10+", label: "Years of Experience" },
-                                { value: "200+", label: "Projects Delivered" },
-                                { value: "50+", label: "Team Members" },
-                                { value: "98%", label: "Client Satisfaction" },
-                            ].map((stat) => (
-                                <div key={stat.label}>
-                                    <p className="text-4xl sm:text-5xl font-bold text-primary mb-2">
-                                        {stat.value}
-                                    </p>
-                                    <p className="text-[#A0A0A2] text-sm sm:text-base">
-                                        {stat.label}
-                                    </p>
-                                </div>
-                            ))}
+                {/* Core Beliefs */}
+                <section className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                    <div className="border-2 border-dashed border-primary rounded-2xl overflow-hidden">
+                        {/* Header */}
+                        <div className="px-10 pt-8 pb-6 border-b-2 border-dashed border-primary">
+                            <span className="text-lg font-semibold text-primary">
+                                Our Core Beliefs
+                            </span>
                         </div>
+                        {/* Belief rows */}
+                        {beliefs.map((belief, index) => (
+                            <div
+                                key={belief.title}
+                                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-10 py-12${
+                                    index < beliefs.length - 1
+                                        ? " border-b-2 border-dashed border-primary"
+                                        : ""
+                                }`}
+                            >
+                                {/* Left: Title + Arrow */}
+                                <div className="flex items-center gap-4">
+                                    <h3 className="text-5xl sm:text-6xl font-bold text-[#1E1E1F] leading-none">
+                                        {belief.title}
+                                    </h3>
+                                    <ArrowIcon size={36} />
+                                </div>
+                                {/* Right: Description */}
+                                <p className="text-[#707072] text-base leading-relaxed">
+                                    {belief.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
+                </section>
+                
+                {/* Companies */}
+                <section
+                    className="relative pt-12 overflow-hidden"
+                    style={{
+                        background:
+                            "linear-gradient(to bottom left, rgba(83, 190, 147, 0.5) 0%, #FFFFFF 40.3846%)",
+                    }}
+                >
                 </section>
             </main>
 

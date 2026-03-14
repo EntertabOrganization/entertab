@@ -129,7 +129,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl flex-1 px-4 sm:px-6 lg:px-8 pt-10 md:pt-12 pb-6">
+      <div className="relative z-10 mx-auto w-full max-w-8xl flex-1 px-4 sm:px-6 lg:px-8 pt-10 md:pt-12 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 justify-items-center text-center">
           {/* Column 1 - Logo & Tagline */}
           <div className="flex flex-col items-center">

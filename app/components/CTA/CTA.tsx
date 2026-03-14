@@ -30,7 +30,7 @@ export default function CTA() {
           
           <Button
             variant="primary"
-            href="#contact"
+            href="/contact"
             showArrow={false}
             className="min-w-[210px] absolute bottom-[60px] left-1/2 -translate-x-1/2 h-[44px] px-6 py-[10px] !rounded-[12px] justify-center bg-[#65C59D] hover:bg-[#65C59D] border-0 hover:border-0 text-[16px]"
           >

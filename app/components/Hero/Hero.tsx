@@ -14,12 +14,12 @@ export default function Hero() {
           "linear-gradient(to bottom left, rgba(83, 190, 147, 0.5) 0%, #FFFFFF 40.3846%)",
       }}
     >
-      <div className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start lg:items-center">
           {/* Left Content */}
           <div className="z-10 relative lg:col-span-8 lg:self-center">
             <h1
-              className={`${poppins.className} text-[32px] leading-[40px] sm:text-[44px] sm:leading-[54px] md:text-[52px] md:leading-[64px] lg:text-[60px] lg:leading-[72px] tracking-[-0.02em] font-normal text-gray-600`}
+              className={`${poppins.className} text-[28px] leading-[36px] sm:text-[36px] sm:leading-[44px] md:text-[42px] md:leading-[52px] lg:text-[48px] lg:leading-[60px] tracking-[-0.02em] font-normal text-gray-600`}
             >
               We are a full-service digital partner, delivering innovative
               digital solutions for
@@ -27,7 +27,7 @@ export default function Hero() {
               <span className="text-[#53BE93]">a smarter future.</span>
             </h1>
 
-            <p className="text-text-gray text-[27px] leading-[36px] font-medium">
+            <p className="text-text-gray text-[18px] leading-[26px] font-medium">
               helping businesses enhance their identity, engagement, and
               performance across every touchpoint.
             </p>

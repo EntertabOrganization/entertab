@@ -17,21 +17,21 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           {/* Left Content */}
           <div className="relative">
-            <h2 className="text-3xl md:text-4xl font-semibold italic text-primary leading-snug mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold italic text-primary leading-snug mb-6">
               Emphasizing
               <br />
               the Future
             </h2>
 
             <p
-              className={`text-text-gray font-normal not-italic text-[24px] leading-[32px] tracking-[0em] mb-6 max-w-[300px] ${poppins.className}`}
+              className={`text-text-gray font-normal not-italic text-[18px] leading-[24px] tracking-[0em] mb-6 max-w-[300px] ${poppins.className}`}
             >
               Let&apos;s build something great together. Tell us about your
               question, your latest project idea, or a potential partnership.
             </p>
 
             <p
-              className={`text-text-gray font-black not-italic text-[24px] leading-[32px] tracking-[0em] max-w-[300px] ${poppins.className}`}
+              className={`text-text-gray font-black not-italic text-[18px] leading-[24px] tracking-[0em] max-w-[300px] ${poppins.className}`}
             >
               We&apos;re here and ready to connect quickly.
             </p>

@@ -46,11 +46,11 @@ const processSteps = [
 export default function WorkingProcess() {
   return (
     <section className="py-12 md:py-16">
-      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle title="Working Process" className="mb-2" />
         <h3
-          className={`${poppins.className} text-center text-text-dark font-normal text-[36px] leading-[44px] tracking-[-0.02em] mb-8 md:mb-12`}
+          className={`${poppins.className} text-center text-text-dark font-normal text-[28px] leading-[36px] tracking-[-0.02em] mb-8 md:mb-12`}
         >
           How We Work
         </h3>

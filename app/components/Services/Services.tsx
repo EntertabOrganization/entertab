@@ -27,12 +27,12 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="py-12 md:py-16">
-      <div className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle title="Our Services" className="mb-5" />
 
         <p
-          className={`text-center text-[36px] leading-[44px] tracking-[-0.02em] font-[400] text-[#1E1E1F] mt-2 mb-8 md:mb-12 ${poppins.className}`}
+          className={`text-center text-[28px] leading-[36px] tracking-[-0.02em] font-[400] text-[#1E1E1F] mt-2 mb-8 md:mb-12 ${poppins.className}`}
         >
           We offer a wide range of digital solutions to help your business
           thrive

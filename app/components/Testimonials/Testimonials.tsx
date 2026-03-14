@@ -67,11 +67,11 @@ export default function Testimonials() {
 
           {/* Right - Description + Navigation */}
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold text-[#1E1E1F] leading-[44px] tracking-[-0.02em] mb-[36px]">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#1E1E1F] leading-[36px] tracking-[-0.02em] mb-[36px]">
               Our true story is written in the success of our clients.
             </h3>
             <p
-              className={`text-[#707072] font-medium not-italic text-[24px] leading-[32px] tracking-[0em] mb-8 ${poppins.className}`}
+              className={`text-[#707072] font-medium not-italic text-[18px] leading-[24px] tracking-[0em] mb-8 ${poppins.className}`}
             >
               Our clients are the best storytellers of our journey—their
               experiences and impressions are proof of our commitment to

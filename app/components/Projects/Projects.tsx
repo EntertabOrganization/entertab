@@ -314,7 +314,7 @@ const projects: Array<{
 export default function Projects() {
   return (
     <section id="projects" className="py-12 md:py-16 bg-white">
-      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle title="Projects" className="mb-2" />
 

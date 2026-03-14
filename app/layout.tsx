@@ -16,6 +16,16 @@ export const metadata: Metadata = {
   title: "EnterTab - Digital Solutions",
   description:
     "EnterTab is a full-service digital partner, delivering innovative digital solutions for a smarter future. Web development, mobile apps, UI/UX, branding, and digital marketing.",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

@@ -12,10 +12,10 @@ export default function CTA() {
           "linear-gradient(to bottom left, #008194 0%, #008194 24.3%, #008194 77.9%, #0E495D 99.98%)",
       }}
     >
-      <div className="mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8 relative z-10 flex flex-1 items-center justify-center">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 flex flex-1 items-center justify-center">
         <div className="max-w-2xl mx-auto text-center">
           <h2
-            className={`${poppins.className} text-[36px] leading-[44px] tracking-[-0.02em] font-semibold text-[#FBFEFD] text-center mb-6`}
+            className={`${poppins.className} text-[28px] leading-[36px] tracking-[-0.02em] font-semibold text-[#FBFEFD] text-center mb-6`}
           >
             Ready to create something
             <br />

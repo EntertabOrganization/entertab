@@ -30,7 +30,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-primary rounded-3xl p-6 md:p-8 shadow-xl h-[800px] flex flex-col">
+    <div className="bg-[#65C59D] rounded-3xl p-6 md:p-8 shadow-xl h-[800px] flex flex-col">
       <h3 className="text-white text-2xl md:text-3xl font-bold text-center mb-6">
         Let&apos;s Get in Touch
       </h3>

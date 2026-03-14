@@ -1,30 +1,57 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+
+const services = [
+  { label: "AI Edge", href: "/services/ai-edge", description: "AI-Powered Automation & Intelligence" },
+  { label: "Digital Transformation", href: "/services/digital-transformation", description: "Hub" },
+  { label: "Mobile App", href: "/services/mobile-app", description: "Development" },
+  { label: "Website", href: "/services/website", description: "Development" },
+  { label: "Brand Building", href: "/services/brand-building" },
+  { label: "UI/UX Design", href: "/services/ui-ux" },
+  { label: "Digital Marketing", href: "/services/digital-marketing" },
+  { label: "Content Writing", href: "/services/content-writing", description: "Marketing Content Writing" },
+  { label: "Social Media", href: "/services/social-media", description: "Management" },
+];
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Who we Are", href: "/who-we-are" },
-  { label: "Services", href: "#services" },
+  { label: "Services", href: null, hasDropdown: true },
   { label: "Our work", href: "#projects" },
   { label: "Career", href: "#career" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 backdrop-blur-sm">
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      isScrolled ? "bg-white shadow-md" : "backdrop-blur-sm"
+    }`}>
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[-200px] left-[-300px] h-[201px] w-[425px] bg-primary blur-3xl"
+        className={`pointer-events-none absolute top-[-200px] left-[-300px] h-[201px] w-[425px] bg-primary blur-3xl transition-opacity duration-300 ${
+          isScrolled ? "opacity-0" : "opacity-100"
+        }`}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#home" className="flex items-center shrink-0">
+          <a href="#home" className="flex items-center shrink-0 mb-5">
             <svg width="120" height="25" viewBox="0 0 279 57" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-13 w-auto mt-5">
               <g clipPath="url(#clip0_289_4426)">
                 <path d="M207.639 23.9713H199.172V3.57368C199.557 3.46146 200.099 3.34061 200.79 3.2025C201.511 3.06868 202.243 3.0022 202.977 3.00396C204.229 2.90361 205.481 3.20646 206.545 3.86717C207.271 4.43688 207.639 5.47273 207.639 6.99198V23.9713ZM199.172 22.547H207.639V28.5894C207.601 29.0319 207.676 29.4766 207.856 29.8835C208.036 30.2904 208.316 30.6466 208.671 30.9201C209.548 31.4644 210.575 31.724 211.61 31.6624C212.239 31.6566 212.866 31.5872 213.481 31.4553C214.062 31.3529 214.63 31.1938 215.178 30.9805C215.527 31.3527 215.821 31.771 216.053 32.2235C216.317 32.7609 216.446 33.353 216.429 33.9499C216.432 34.5702 216.283 35.1821 215.995 35.7335C215.707 36.285 215.289 36.7599 214.776 37.1179C213.697 37.9523 211.892 38.3696 209.362 38.3696C206.143 38.3696 203.638 37.6502 201.848 36.2115C200.099 34.77 199.172 32.4221 199.172 29.1678V22.547ZM204.586 17.3677V10.8937H215.642C215.881 11.3055 216.072 11.7428 216.21 12.1971C216.409 12.802 216.506 13.4346 216.499 14.0703C216.579 14.9715 216.304 15.8685 215.729 16.5736C215.452 16.8418 215.122 17.0507 214.759 17.1873C214.396 17.324 214.009 17.3854 213.621 17.3677H204.586Z" fill="#53BE93"/>
@@ -82,22 +109,71 @@ export default function Header() {
 
           {/* Centered Navigation */}
           <nav className="hidden lg:flex items-center mx-auto">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-text-dark text-[20px] font-large hover:text-primary transition-colors duration-200 relative mr-12 last:mr-0 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              if (link.hasDropdown) {
+                return (
+                  <div
+                    key={link.label}
+                    className="relative group"
+                  >
+                    <button
+                      className={`text-[16px] font-large transition-colors duration-200 relative mr-12 ${
+                        isScrolled ? "text-text-dark hover:text-primary" : "text-text-dark hover:text-primary"
+                      } after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full`}
+                      onMouseEnter={() => setServicesDropdownOpen(true)}
+                      onMouseLeave={() => setServicesDropdownOpen(false)}
+                    >
+                      {link.label}
+                    </button>
+
+                    {/* Dropdown Menu */}
+                    <div
+                      className={`absolute left-1/2 transform -translate-x-1/2 mt-4 w-screen max-w-7xl bg-white rounded-lg shadow-xl border border-border-light opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-4 px-8`}
+                      onMouseEnter={() => setServicesDropdownOpen(true)}
+                      onMouseLeave={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className="grid grid-cols-2 gap-2">
+                        {services.map((service) => (
+                          <Link
+                            key={service.label}
+                            href={service.href}
+                            className="py-2 px-4 rounded-lg hover:bg-gradient-to-r hover:from-mint/10 hover:to-primary/10 transition-all duration-200 border border-transparent hover:border-mint/30 group/item"
+                          >
+                            <span className="text-text-dark text-[14px] font-semibold group-hover/item:text-primary transition-colors">
+                              {service.label}
+                            </span>
+                            {service.description && (
+                              <span className="text-gray-500 text-[12px] block group-hover/item:text-gray-700 transition-colors">
+                                {service.description}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href as string}
+                  className={`text-[16px] font-large transition-colors duration-200 relative mr-12 last:mr-0 ${
+                    isScrolled ? "text-text-dark hover:text-primary" : "text-text-dark hover:text-primary"
+                  } after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Right actions */}
           <div className="flex items-center gap-4">
             <a
               href="#contact"
-              className="hidden lg:inline-flex items-center px-6 py-3.5 bg-[linear-gradient(90deg,_#666666_0%,_#282828_100%)] text-white text-sm font-medium rounded-[18px] hover:opacity-90 transition-opacity duration-200"
+              className="hidden lg:inline-flex items-center px-6 py-2.5 bg-[linear-gradient(90deg,_#666666_0%,_#282828_100%)] text-white text-xs font-medium rounded-[16px] hover:opacity-90 transition-opacity duration-200"
             >
               Let&apos;s Collaborate
             </a>
@@ -115,20 +191,49 @@ export default function Header() {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="bg-white/95 backdrop-blur-sm border-t border-border-light px-4 py-4 space-y-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-4 py-3 text-text-dark text-[20px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            if (link.hasDropdown) {
+              return (
+                <div key={link.label}>
+                  <div className="px-4 py-3 text-text-dark text-[20px] font-medium">
+                    {link.label}
+                  </div>
+                  <div className="pl-4 space-y-1">
+                    {services.map((service) => (
+                      <Link
+                        key={service.label}
+                        href={service.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block px-4 py-2 text-text-dark text-[16px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
+                      >
+                        {service.label}
+                        {service.description && (
+                          <span className="text-gray-500 text-[12px] block">
+                            {service.description}
+                          </span>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={link.label}
+                href={link.href as string}
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-4 py-3 text-text-dark text-[20px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <a
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}

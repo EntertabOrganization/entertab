@@ -1,116 +1,70 @@
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
-import ContactPageForm from "@/app/components/Contact/ContactPageForm";
+import CareerPageForm from "@/app/components/Contact/CareerPageForm";
 import Link from "next/link";
 
-export default function CareerJourneyPage() {
+export default function StartYourCareerJourneyPage() {
   return (
     <>
       <Header />
       <main>
-        <section className="py-16 md:py-24 bg-gradient-to-br from-white via-white to-mint-subtle">
+        <section className="py-16 md:py-24" style={{
+          background: "linear-gradient(to bottom left, rgba(83, 190, 147, 0.5) 0%, #FFFFFF 40.3846%)"
+        }}>
           <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            {/* Back Link */}
-            <Link
-              href="/contact"
-              className="inline-flex items-center text-primary hover:text-primary/80 font-semibold mb-8 transition-colors"
-            >
-              <svg
-                className="w-4 h-4 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              Back to Contact
-            </Link>
-
-            {/* Page Header */}
-            <div className="mb-12 md:mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-text-dark mb-4">
-                Start Your Career Journey
-              </h1>
-              <p className="text-lg text-text-gray max-w-3xl">
-                Ready to make an impact? Join our team and work with talented
-                professionals on exciting projects. Share your profile and let
-                us know why you think you&apos;d be a great fit for our team.
-              </p>
-            </div>
-
             {/* Form Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Left - Career Details Placeholder */}
-              <div className="order-2 lg:order-1">
-                <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg">
-                  <h2 className="text-2xl font-bold text-text-dark mb-6">
-                    Tell us about yourself
-                  </h2>
-                  <ul className="space-y-4">
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold text-xl">01</span>
-                      <div>
-                        <h3 className="font-semibold text-text-dark mb-1">
-                          Your Experience
-                        </h3>
-                        <p className="text-text-gray text-sm">
-                          Years of experience and key skills you bring
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold text-xl">02</span>
-                      <div>
-                        <h3 className="font-semibold text-text-dark mb-1">
-                          Position Interest
-                        </h3>
-                        <p className="text-text-gray text-sm">
-                          What role or position interests you most
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold text-xl">03</span>
-                      <div>
-                        <h3 className="font-semibold text-text-dark mb-1">
-                          Career Goals
-                        </h3>
-                        <p className="text-text-gray text-sm">
-                          Where do you see yourself in the next few years
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold text-xl">04</span>
-                      <div>
-                        <h3 className="font-semibold text-text-dark mb-1">
-                          Why Entertab?
-                        </h3>
-                        <p className="text-text-gray text-sm">
-                          What excites you about working with our team
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mt-22">
+              {/* Left - Project Details Placeholder */}
+              <div className="mb-12 md:mb-16">
+                <div className="inline-flex items-center justify-center rounded-full p-3 mb-8" style={{
+                  width: 120,
+                  height: 120,
+                  background: "rgba(152, 216, 190, 0.4)",
+                  backdropFilter: "blur(160px)",
+                  boxShadow: "0 0 90px rgba(86, 191, 148, 0.7)"
+                }}>
+                  <svg width="80" height="100" viewBox="0 0 131 157" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M68.7319 78.3219C66.071 82.151 63.8387 85.4345 61.5337 88.6711C55.79 96.7571 50.0317 104.834 44.2343 112.88C40.5434 118.006 39.7288 123.453 42.0498 129.348C43.468 132.952 44.7721 136.594 46.1946 140.196C48.6121 146.326 53.0952 150.07 59.6626 150.83C65.9247 151.549 71.0823 149.244 74.7768 144.054C84.7623 130.035 94.8388 116.081 104.619 101.927C110.887 92.8622 111.799 82.8637 108.065 72.5899C105.582 65.7519 103.077 58.8761 99.8973 52.3501C95.9675 44.2853 89.2431 38.9904 80.5016 36.8598C63.1209 32.6169 45.7014 28.5265 28.2165 24.7201C15.5962 21.9715 5.40242 33.6588 9.46821 45.9081C10.7585 49.7967 12.3889 53.5641 13.7799 57.4195C15.9842 63.517 20.282 67.0383 26.5888 68.4532C38.9349 71.2213 51.2472 74.1292 63.5664 76.9925C65.11 77.3423 66.6191 77.7696 68.7319 78.3219Z" fill="#56BF94" />
+                    <path d="M74.7893 144.048C84.773 130.025 91.6119 120.744 101.39 106.585C108.836 85.7426 68.7425 78.3117 68.7425 78.3117C68.7425 78.3117 63.8493 85.4242 61.5463 88.6652C55.7962 96.7487 50.0424 104.823 44.2449 112.87C40.5559 118 39.7394 123.442 42.0623 129.342C43.4786 132.942 44.7846 136.588 46.2053 140.186C48.6247 146.321 53.1059 150.06 59.6732 150.819C62.7349 151.17 65.5319 150.8 68.0226 149.722C70.6279 148.594 72.894 146.695 74.7893 144.048Z" fill="#56BF94" />
+                    <path d="M74.7893 144.048C84.773 130.025 91.6119 120.744 101.39 106.585C108.836 85.7426 68.7425 78.3117 68.7425 78.3117C68.7425 78.3117 63.8493 85.4242 61.5463 88.6652C55.7962 96.7487 50.0424 104.823 44.2449 112.87C40.5559 118 39.7394 123.442 42.0623 129.342C43.4786 132.942 44.7846 136.588 46.2053 140.186C48.6247 146.321 53.1059 150.06 59.6732 150.819C62.7349 151.17 65.5319 150.8 68.0226 149.722C70.6279 148.594 72.894 146.695 74.7893 144.048Z" fill="url(#paint0_linear_527_4324)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_527_4324" x1="102.455" y1="99.2722" x2="40.1534" y2="126.234" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#0D485C" />
+                        <stop offset="0.243" stopColor="#1D5C67" />
+                        <stop offset="0.7791" stopColor="#439A85" />
+                        <stop offset="1" stopColor="#56BF94" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
+
+                <h1 style={{
+                  fontWeight: 600,
+                  fontSize: "32px",
+                  color: "#54BF93",
+                }} className="max-w-md mb-5 ">
+                  Start your career journey with Entertab.
+                </h1>
+                <p style={{
+                  fontWeight: 500,
+                  fontSize: "22px",
+                  lineHeight: "28px",
+                  color: "#707072",
+                }} className="max-w-xl">
+                  Join a collaborative digital agency that believes in talent, fuels ambition, and delivers meaningful results.                </p>
               </div>
 
               {/* Right - Contact Form */}
               <div className="order-1 lg:order-2">
-                <ContactPageForm
-                  title="Tell Us About You"
+                <CareerPageForm
+                  title="Let's Get in Touch"
                   buttonText="Submit Application"
                 />
               </div>
             </div>
           </div>
         </section>
-      </main>
+      </main >
       <Footer />
     </>
   );

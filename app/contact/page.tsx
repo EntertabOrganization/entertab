@@ -18,7 +18,7 @@ export default function ContactPage() {
                             <h1 style={{ fontWeight: 700, fontStyle: 'Bold', fontSize: '36px', textAlign: 'center', color: '#53BE93' }} className="mb-4">
                                 Opportunity Awaits
                             </h1>
-                            <p style={{fontWeight: 600, fontStyle: 'SemiBold', fontSize: '36px', lineHeight: '12px', letterSpacing: '-2%', textAlign: 'center', color: '#707072' }} className="max-w-2xl mx-auto">
+                            <p style={{fontWeight: 600, fontStyle: 'SemiBold', fontSize: '36px', textAlign: 'center', color: '#707072' }} className="max-w-2xl mx-auto">
                                 We're here and ready to talk
                             </p>
                         </div>
@@ -34,10 +34,10 @@ export default function ContactPage() {
 
                                     {/* Content */}
                                     <div className="relative z-10 w-full h-full flex flex-col justify-center items-center text-center p-8">
-                                        <h4 style={{ fontFamily: 'Poppins', fontWeight: 700, fontStyle: 'Bold', fontSize: '24px', lineHeight: '32px', letterSpacing: '0%', textAlign: 'center', color: '#707072' }} className="mb-4">
+                                        <h4 style={{ fontFamily: 'Poppins', fontWeight: 700, fontStyle: 'Bold', fontSize: '24px', textAlign: 'center', color: '#707072' }} className="mb-4">
                                             Your vision deserves premium execution
                                         </h4>
-                                        <h2 style={{ fontFamily: 'Poppins', fontWeight: 700, fontStyle: 'Bold', fontSize: '36px', lineHeight: '12px', letterSpacing: '-2%', textAlign: 'center', color: '#707072' }}>
+                                        <h2 style={{ fontFamily: 'Poppins', fontWeight: 700, fontStyle: 'Bold', fontSize: '36px', textAlign: 'center', color: '#707072' }}>
                                             Start Your Service Request
                                         </h2>
                                     </div>
@@ -53,10 +53,10 @@ export default function ContactPage() {
 
                                     {/* Content */}
                                     <div className="relative z-10 w-full h-full flex flex-col justify-center items-center text-center p-8">
-                                        <h4 style={{ fontFamily: 'Poppins', fontWeight: 700, fontStyle: 'Bold', fontSize: '24px', lineHeight: '32px', letterSpacing: '0%', textAlign: 'center', color: '#707072' }} className="mb-4">
+                                        <h4 style={{ fontFamily: 'Poppins', fontWeight: 700, fontStyle: 'Bold', fontSize: '24px', textAlign: 'center', color: '#707072' }} className="mb-4">
                                             Innovate, Create, Grow
                                         </h4>
-                                        <h2 style={{ fontFamily: 'Poppins', fontWeight: 700, fontStyle: 'Bold', fontSize: '36px', lineHeight: '12px', letterSpacing: '-2%', textAlign: 'center', color: '#707072' }}>
+                                        <h2 style={{ fontFamily: 'Poppins', fontWeight: 700, fontStyle: 'Bold', fontSize: '36px', textAlign: 'center', color: '#707072' }}>
                                             Join Our Visionary Team
                                         </h2>
                                     </div>

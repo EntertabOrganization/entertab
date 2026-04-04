@@ -40,14 +40,14 @@ export default function DigitalMarketingPage() {
 
       {/* Content and Form Row */}
       <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-8">
+        <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-4 sm:p-6 md:p-8">
           
           {/* Left Column (Content) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start">
-            <h2 className="text-[36px] font-semibold text-[#54BF93] mb-6 leading-[44px] tracking-[-0.02em]">
+            <h2 className="text-[22px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-semibold text-[#54BF93] mb-4 sm:mb-6 leading-[28px] sm:leading-[36px] md:leading-[40px] lg:leading-[44px] tracking-[-0.02em]">
               Driving Measurable Growth Through Digital Marketing
             </h2>
-            <div className="space-y-4 text-[#707072] text-[24px] font-normal leading-[32px]">
+            <div className="space-y-3 sm:space-y-4 text-[#707072] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] font-normal leading-[20px] sm:leading-[24px] md:leading-[28px] lg:leading-[32px]">
               <p>
                 EnterTab’s Digital Marketing service helps businesses build a strong online presence and reach the right audience with precision. We create tailored, data-driven campaigns that align with your brand goals and customer behavior across platforms like Google, Facebook, Instagram, and LinkedIn.
               </p>

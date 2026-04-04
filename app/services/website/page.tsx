@@ -40,14 +40,14 @@ export default function WebsitePage() {
 
       {/* Content and Form Row */}
       <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-8">
+        <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-4 sm:p-6 md:p-8">
           
           {/* Left Column (Content) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start">
-            <h2 className="text-[36px] font-semibold text-[#54BF93] mb-6 leading-[44px] tracking-[-0.02em]">
+            <h2 className="text-[22px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-semibold text-[#54BF93] mb-4 sm:mb-6 leading-[28px] sm:leading-[36px] md:leading-[40px] lg:leading-[44px] tracking-[-0.02em]">
               Build High-Performing Websites That Drive Growth
             </h2>
-            <div className="space-y-4 text-[#707072] text-[24px] font-normal leading-[32px]">
+            <div className="space-y-3 sm:space-y-4 text-[#707072] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] font-normal leading-[20px] sm:leading-[24px] md:leading-[28px] lg:leading-[32px]">
               <p>
                 EnterTab’s Website Development service delivers high-performing digital platforms that combine functionality, design, and usability. We build responsive websites optimized for speed, SEO, and cross-device compatibility—ensuring your brand looks and performs flawlessly on every screen.
               </p>

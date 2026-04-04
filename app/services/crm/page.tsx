@@ -15,19 +15,19 @@ export default function CRMPage() {
     return (
         <>
             <Header />
-            <main className={`${poppins.className} py-20 md:py-32 bg-gray-50 flex flex-col items-center`}
+            <main className={`${poppins.className} py-12 sm:py-20 md:py-28 lg:py-32 bg-gray-50 flex flex-col items-center`}
                 style={{
                     background: "linear-gradient(to bottom left, rgba(83, 190, 147, 0.5) 0%, #FFFFFF 40.3846%)",
                 }}>
                 {/* Title */}
-                <div className="w-full text-center px-4 mb-8">
-                    <h1 className="text-[36px] font-semibold text-[#54BF93]">
-                        Crm
+                <div className="w-full text-center px-4 mb-6 sm:mb-8 md:mb-10">
+                    <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-semibold text-[#54BF93] leading-[32px] sm:leading-[38px] md:leading-[44px] lg:leading-[52px]">
+                        CRM Solution
                     </h1>
                 </div>
 
                 {/* Image Container */}
-                <div className="w-full max-w-[90rem] px-4 mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
+                <div className="w-full max-w-[90rem] px-4 mb-10 sm:mb-14 md:mb-16 lg:mb-20 relative h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
                     <Image
                         src="/Services/CrmBg.png"
                         alt="Crm Solutions"
@@ -40,11 +40,9 @@ export default function CRMPage() {
 
                 {/* Content and Form Row */}
                 <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-8">
-
-                        {/* Left Column (Content) */}
+        <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-4 sm:p-6 md:p-8">
                         <div className="w-full md:w-1/2 flex flex-col justify-start">
-                            <div className="space-y-4 text-[#707072] text-[24px] font-normal leading-[32px]">
+                            <div className="space-y-3 sm:space-y-4 text-[#707072] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] font-normal leading-[20px] sm:leading-[24px] md:leading-[28px] lg:leading-[32px]">
                                 <p>
                                     EnterTab’s CRM solutions empower businesses to manage and nurture customer relationships more effectively by providing a centralized platform that integrates sales, marketing, and customer support functions. Our CRM systems are built to deliver a 360-degree view of the customer, enabling personalized engagement, streamlined communication, and data-driven decision-making.              
                                 </p>

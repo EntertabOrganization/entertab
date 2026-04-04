@@ -29,7 +29,7 @@ export default function AIEdgePage() {
                 {/* Image Container */}
                 <div className="w-full max-w-[90rem] px-4 mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
                     <Image
-                        src="/Services/VoIPBg.png"
+                        src="/Services/VoipIntegerationBg.png"
                         alt="VoIP Integration"
                         fill
                         className="object-cover"

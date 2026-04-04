@@ -7,8 +7,8 @@ import Footer from "@/app/components/Footer/Footer";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
-  title: "Purchasing - Streamline Procurement | EnterTab",
-  description: "Simplify your procurement process with EnterTab's Purchasing solution. Manage suppliers, monitor spending, and optimize purchasing with data-driven insights.",
+  title: "Sales Management - Accelerate Revenue Growth | EnterTab",
+  description: "Boost sales performance with EnterTab's Sales Management solution. Manage leads, track opportunities, and close deals faster with powerful tools.",
 };
 
 export default function SalesPage() {

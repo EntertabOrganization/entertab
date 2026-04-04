@@ -6,7 +6,12 @@ import Footer from "@/app/components/Footer/Footer";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-export default function AIEdgePage() {
+export const metadata = {
+  title: "Inventory Management - Optimal Stock Control | EnterTab",
+  description: "Manage inventory efficiently with EnterTab's Inventory Management solution. Track stock levels, reduce waste, and optimize supply chain operations.",
+};
+
+export default function InventoryPage() {
   return (
     <>
       <Header />

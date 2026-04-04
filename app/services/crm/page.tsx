@@ -7,11 +7,11 @@ import Footer from "@/app/components/Footer/Footer";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
-    title: "AI Edge - AI-Powered Automation & Intelligence | EnterTab",
-    description: "Transform your business with AI-powered automation and intelligent solutions. EnterTab's AI Edge service delivers cutting-edge automation and machine learning capabilities.",
+    title: "CRM Solution - Customer Relationship Management | EnterTab",
+    description: "Enhance customer relationships with EnterTab's CRM solution. Streamline sales, improve customer service, and drive business growth with comprehensive management tools.",
 };
 
-export default function AIEdgePage() {
+export default function CRMPage() {
     return (
         <>
             <Header />

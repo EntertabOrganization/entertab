@@ -25,6 +25,7 @@ const navLinks = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -194,15 +195,42 @@ export default function Header() {
             if (link.hasDropdown) {
               return (
                 <div key={link.label}>
-                  <div className="px-4 py-3 text-text-dark text-[20px] font-medium">
-                    {link.label}
-                  </div>
-                  <div className="pl-4 space-y-1">
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="w-full flex items-center justify-between px-4 py-3 text-text-dark text-[20px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
+                    aria-expanded={mobileServicesOpen}
+                    aria-controls="mobile-services-menu"
+                  >
+                    <span>{link.label}</span>
+                    <svg
+                      className={`w-5 h-5 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : "rotate-0"}`}
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.939a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+
+                  <div
+                    id="mobile-services-menu"
+                    className={`pl-4 space-y-1 overflow-hidden transition-all duration-200 ${
+                      mobileServicesOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
                     {services.map((service) => (
                       <Link
                         key={service.label}
                         href={service.href}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          setMobileServicesOpen(false);
+                        }}
                         className="block px-4 py-2 text-text-dark text-[16px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
                       >
                         {service.label}
@@ -217,7 +245,10 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href as string}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setMobileServicesOpen(false);
+                }}
                 className="block px-4 py-3 text-text-dark text-[20px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
               >
                 {link.label}
@@ -226,7 +257,10 @@ export default function Header() {
           })}
           <a
             href="#contact"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setMobileServicesOpen(false);
+            }}
             className="block mx-4 mt-3 text-center px-6 py-3.5 bg-[linear-gradient(90deg,_#666666_0%,_#282828_100%)] text-white text-sm font-medium rounded-[18px] hover:opacity-90 transition-opacity duration-200"
           >
             Let&apos;s Collaborate

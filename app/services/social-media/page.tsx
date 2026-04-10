@@ -3,6 +3,7 @@ import Image from "next/image";
 import ContactForm from "@/app/components/Contact/ContactForm";
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
+import Link from "next/link";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
@@ -64,6 +65,12 @@ export default function SocialMediaPage() {
 
         </div>
       </section>
+      {/* section back to all services */}
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-16 md:mt-24">
+          <Link href="/services" className="text-[#54BF93] hover:text-[#54BF93]/80">
+            &larr; Back to all services
+          </Link>
+        </div>
       </main>
       <Footer />
     </>

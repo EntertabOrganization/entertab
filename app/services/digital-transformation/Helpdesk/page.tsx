@@ -3,15 +3,16 @@ import Image from "next/image";
 import ContactForm from "@/app/components/Contact/ContactForm";
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
+import Link from "next/link";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
-  title: "Project Management - Streamline Team Collaboration | EnterTab",
-  description: "Manage projects effectively with EnterTab's Project Management solution. Plan, track, and deliver projects on time with team collaboration tools.",
+  title: "Helpdesk Management - Customer Support Solutions | EnterTab",
+  description: "Deliver exceptional customer support with EnterTab's Helpdesk Management solution. Automate ticketing, track issues, and provide faster resolutions.",
 };
 
-export default function ProjectManagementPage() {
+export default function HelpdeskPage() {
   return (
     <>
       <Header />
@@ -22,15 +23,15 @@ export default function ProjectManagementPage() {
       {/* Title */}
       <div className="w-full text-center px-4 mb-6 sm:mb-8 md:mb-10">
         <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-semibold text-[#54BF93] leading-[32px] sm:leading-[38px] md:leading-[44px] lg:leading-[52px]">
-          Project Management
+            Helpdesk
         </h1>
       </div>
 
       {/* Image Container */}
       <div className="w-full max-w-[90rem] px-4 mb-10 sm:mb-14 md:mb-16 lg:mb-20 relative h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
         <Image 
-          src="/Services/ProjectManagementBg.png" 
-          alt="Project Management" 
+          src="/Services/HelpdeskBg.png" 
+          alt="Helpdesk Solutions" 
           fill
           className="object-cover"
           unoptimized 
@@ -46,13 +47,13 @@ export default function ProjectManagementPage() {
           <div className="w-full md:w-1/2 flex flex-col justify-start">
             <div className="space-y-3 sm:space-y-4 text-[#707072] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] font-normal leading-[20px] sm:leading-[24px] md:leading-[28px] lg:leading-[32px]">
               <p>
-                EnterTab’s Project Management solution enables businesses to plan, execute, and monitor projects with precision and efficiency. It provides a centralized workspace where teams can set timelines, assign tasks, allocate resources, and track progress with full visibility.
+                EnterTab’s Helpdesk solution is designed to streamline customer support operations by centralizing all incoming requests in one intelligent and organized system. It allows support teams to categorize tickets, assign them to the right agents, and track resolution time with full transparency.
               </p>
               <p>
-                The platform supports collaborative workflows, real-time updates, and milestone tracking, ensuring that everyone stays aligned and accountable. Managers can monitor budgets, deadlines, and performance indicators in one place, allowing for proactive adjustments and better decision-making.
+                Customers benefit from faster responses and consistent communication across channels including email, chat, and web forms. Managers gain access to insightful performance reports that help identify recurring issues, improve response quality, and optimize resource allocation.
               </p>
               <p>
-                Whether you are managing internal initiatives or client-facing projects, our solution helps reduce delays, minimize risks, and ensure successful outcomes at every stage of the project lifecycle
+                Whether serving internal teams or external clients, our Helpdesk solution helps businesses deliver dependable support experiences that build trust and long-term loyalty.
               </p>
             </div>
           </div>
@@ -64,6 +65,12 @@ export default function ProjectManagementPage() {
 
         </div>
       </section>
+      {/* section back to all services */}
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-16 md:mt-24">
+          <Link href="/services" className="text-[#54BF93] hover:text-[#54BF93]/80">
+            &larr; Back to all services
+          </Link>
+        </div>
       </main>
       <Footer />
     </>

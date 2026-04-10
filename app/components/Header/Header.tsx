@@ -4,15 +4,15 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const services = [
-  { label: "AI Edge", href: "/services/ai-edge", description: "AI-Powered Automation & Intelligence" },
-  { label: "Digital Transformation", href: "/services/digital-transformation", description: "Hub" },
-  { label: "Mobile App", href: "/services/mobile-app", description: "Development" },
-  { label: "Website", href: "/services/website", description: "Development" },
+  { label: "AI Edge", href: "/services/ai-edge" },
+  { label: "Digital Transformation", href: "/services/digital-transformation" },
+  { label: "Mobile App", href: "/services/mobile-app" },
+  { label: "Website", href: "/services/website" },
   { label: "Brand Building", href: "/services/brand-building" },
   { label: "UI/UX Design", href: "/services/ui-ux" },
   { label: "Digital Marketing", href: "/services/digital-marketing" },
-  { label: "Content Writing", href: "/services/content-writing", description: "Marketing Content Writing" },
-  { label: "Social Media", href: "/services/social-media", description: "Management" },
+  { label: "Content Writing", href: "/services/content-writing" },
+  { label: "Social Media", href: "/services/social-media" },
 ];
 
 const navLinks = [
@@ -142,11 +142,6 @@ export default function Header() {
                             <span className="text-text-dark text-[14px] font-semibold group-hover/item:text-primary transition-colors">
                               {service.label}
                             </span>
-                            {service.description && (
-                              <span className="text-gray-500 text-[12px] block group-hover/item:text-gray-700 transition-colors">
-                                {service.description}
-                              </span>
-                            )}
                           </Link>
                         ))}
                       </div>
@@ -211,11 +206,6 @@ export default function Header() {
                         className="block px-4 py-2 text-text-dark text-[16px] font-medium hover:text-primary hover:bg-mint/50 rounded-lg transition-colors duration-200"
                       >
                         {service.label}
-                        {service.description && (
-                          <span className="text-gray-500 text-[12px] block">
-                            {service.description}
-                          </span>
-                        )}
                       </Link>
                     ))}
                   </div>

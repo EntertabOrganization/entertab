@@ -243,7 +243,7 @@ export default function Footer() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             {/* Copyright */}
-            <p className="text-white/50 text-xs">Copyright &copy; 2026 EnterTab LLC</p>
+            <p className="text-white/50 text-xs">Copyright &copy; 2026 entertab LLC</p>
 
             {/* Payments */}
             <div className="flex items-center gap-4">

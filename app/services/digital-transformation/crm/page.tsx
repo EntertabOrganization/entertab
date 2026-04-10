@@ -3,15 +3,16 @@ import Image from "next/image";
 import ContactForm from "@/app/components/Contact/ContactForm";
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
+import Link from "next/link";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
-  title: "Sales Management - Accelerate Revenue Growth | EnterTab",
-  description: "Boost sales performance with EnterTab's Sales Management solution. Manage leads, track opportunities, and close deals faster with powerful tools.",
+    title: "CRM Solution - Customer Relationship Management | EnterTab",
+    description: "Enhance customer relationships with EnterTab's CRM solution. Streamline sales, improve customer service, and drive business growth with comprehensive management tools.",
 };
 
-export default function SalesPage() {
+export default function CRMPage() {
     return (
         <>
             <Header />
@@ -22,15 +23,15 @@ export default function SalesPage() {
                 {/* Title */}
                 <div className="w-full text-center px-4 mb-6 sm:mb-8 md:mb-10">
                     <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] font-semibold text-[#54BF93] leading-[32px] sm:leading-[38px] md:leading-[44px] lg:leading-[52px]">
-                        Sales Management
+                        CRM Solution
                     </h1>
                 </div>
 
                 {/* Image Container */}
                 <div className="w-full max-w-[90rem] px-4 mb-10 sm:mb-14 md:mb-16 lg:mb-20 relative h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
                     <Image
-                        src="/Services/SalesManagementBg.png"
-                        alt="Sales Management"
+                        src="/Services/CrmBg.png"
+                        alt="Crm Solutions"
                         fill
                         className="object-cover"
                         unoptimized
@@ -40,19 +41,14 @@ export default function SalesPage() {
 
                 {/* Content and Form Row */}
                 <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-4 sm:p-6 md:p-8">
-
-                        {/* Left Column (Content) */}
+        <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-4 sm:p-6 md:p-8">
                         <div className="w-full md:w-1/2 flex flex-col justify-start">
                             <div className="space-y-3 sm:space-y-4 text-[#707072] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] font-normal leading-[20px] sm:leading-[24px] md:leading-[28px] lg:leading-[32px]">
                                 <p>
-                                    EnterTab’s Sales Management solution helps businesses take full control of the sales cycle. From lead capture and opportunity tracking to quotations, invoicing, and deal closure, every stage is managed within a centralized and intuitive platform.
+                                    EnterTab’s CRM solutions empower businesses to manage and nurture customer relationships more effectively by providing a centralized platform that integrates sales, marketing, and customer support functions. Our CRM systems are built to deliver a 360-degree view of the customer, enabling personalized engagement, streamlined communication, and data-driven decision-making.              
                                 </p>
-                                <p>
-                                    The system provides sales teams with up-to-date information, helping them prioritize leads, follow up effectively, and close deals faster. With built-in reporting, performance dashboards, and customer interaction history, managers gain the insights needed to improve forecasting, monitor KPIs, and refine sales strategies.
-                                </p>
-                                <p>
-                                    Whether you operate in a B2B or B2C environment, our solution adapts to your sales structure, supports collaboration across departments, and ensures that your team remains focused, responsive, and results-driven
+                                <p className="mt-5">
+                                    Whether you're a B2B or B2C organization, our CRM tools improve lead management, automate follow-ups, track customer behavior, and ensure timely service delivery. With intelligent analytics and workflow automation, businesses gain the ability to predict customer needs, increase conversion rates, and build lasting relationships that translate into sustainable growth. Seamlessly integrated with your existing platforms, our CRM solutions are tailored to fit your unique operational goals and scale as your business evolves.              
                                 </p>
                             </div>
                         </div>
@@ -61,9 +57,14 @@ export default function SalesPage() {
                         <div className="w-full md:w-1/2">
                             <ContactForm />
                         </div>
-
                     </div>
                 </section>
+                {/* section back to all services */}
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 mt-16 md:mt-24">
+          <Link href="/services" className="text-[#54BF93] hover:text-[#54BF93]/80">
+            &larr; Back to all services
+          </Link>
+        </div>
             </main>
             <Footer />
         </>

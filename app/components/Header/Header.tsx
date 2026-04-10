@@ -128,7 +128,7 @@ export default function Header() {
 
                     {/* Dropdown Menu */}
                     <div
-                      className={`absolute left-1/2 transform -translate-x-1/2 mt-4 w-screen max-w-7xl bg-white rounded-lg shadow-xl border border-border-light opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-4 px-8`}
+                      className={`absolute left-1/2 transform -translate-x-1/2 mt-4 w-screen max-w-xl bg-white rounded-lg shadow-xl border border-border-light opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-4 px-8`}
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
                     >

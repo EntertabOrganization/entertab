@@ -233,7 +233,7 @@ export default function Services() {
   const SWIPE_THRESHOLD = 50; // Minimum pixels to trigger slide
   const VELOCITY_THRESHOLD = 0.5; // Pixels per millisecond for swipe velocity
   const ANIMATION_DURATION = 300; // Base milliseconds for snap animation
-  const AUTO_ADVANCE_INTERVAL = 30000; // 30 seconds (resets on interaction)
+  const AUTO_ADVANCE_INTERVAL = 10000; // 10 seconds (resets on interaction)
   const CARDS_TO_DISPLAY = 4; // Number of cards visible at once
 
   // Enhanced useEffect with proper auto-advance that pauses on interaction
@@ -247,7 +247,7 @@ export default function Services() {
           setIsAnimating(false);
         }, ANIMATION_DURATION);
       }
-    }, 30000); // 30 seconds
+    }, 10000); // 10 seconds
 
     return () => clearInterval(timer);
   }, [isAnimating, services.length]);

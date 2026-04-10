@@ -89,6 +89,7 @@ export default function WhoWeArePage() {
                                 alt="Who We Are at EnterTab"
                                 fill
                                 className="object-cover"
+                                sizes="(min-width: 1440px) 1317px, 100vw"
                                 priority
                             />
                             {/* Overlay: Heading */}

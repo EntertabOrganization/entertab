@@ -34,8 +34,7 @@ export default function MobileAppPage() {
           alt="Mobile App Development" 
           fill
           className="object-cover"
-          unoptimized 
-        />
+          sizes="(min-width: 1536px) 1440px, 100vw"        />
       </div>
 
       {/* Content and Form Row */}

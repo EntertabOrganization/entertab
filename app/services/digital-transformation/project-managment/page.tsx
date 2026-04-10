@@ -34,9 +34,7 @@ export default function ProjectManagementPage() {
           alt="Project Management" 
           fill
           className="object-cover"
-          unoptimized 
-        />
-        {/* Note: Unoptimized used here or placeholder path, adjust as needed */}
+          sizes="(min-width: 1536px) 1440px, 100vw"        />
       </div>
 
       {/* Content and Form Row */}

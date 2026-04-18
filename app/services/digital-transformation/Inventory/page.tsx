@@ -38,7 +38,7 @@ export default function InventoryPage() {
       </div>
 
       {/* Content and Form Row */}
-      <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-4 sm:p-6 md:p-8">
           
           {/* Left Column (Content) */}

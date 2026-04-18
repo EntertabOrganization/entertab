@@ -38,7 +38,7 @@ export default function CRMPage() {
                 </div>
 
                 {/* Content and Form Row */}
-                <section className="mx-auto w-full max-w-8xl px-4 sm:px-6 lg:px-8">
+                <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row gap-35 rounded-3xl p-4 sm:p-6 md:p-8">
                         <div className="w-full md:w-1/2 flex flex-col justify-start">
                             <div className="space-y-3 sm:space-y-4 text-[#707072] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[24px] font-normal leading-[20px] sm:leading-[24px] md:leading-[28px] lg:leading-[32px]">

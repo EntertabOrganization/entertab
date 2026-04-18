@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 import ArrowIcon from "../ui/ArrowIcon";
@@ -7,6 +8,7 @@ interface ProjectCardProps {
   name: string;
   imageSrc?: string;
   imageAlt?: string;
+  href?: string;
   className?: string;
   topLeftIcon?: ReactNode;
   bottomRightIcon?: ReactNode;
@@ -16,11 +18,12 @@ export default function ProjectCard({
   name,
   imageSrc,
   imageAlt,
+  href,
   className = "",
   topLeftIcon = "",
   bottomRightIcon = <ArrowIcon size={22} color="#fff" />,
 }: ProjectCardProps) {
-  return (
+  const cardContent = (
     <div
       className={`relative group w-full aspect-square overflow-hidden rounded-2xl cursor-pointer ${className}`}
     >
@@ -55,5 +58,17 @@ export default function ProjectCard({
         {bottomRightIcon}
       </div>
     </div>
+  );
+
+  if (href) {
+    return (
+      <Link href={href} aria-label={`Open ${name} project`} className="block">
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    cardContent
   );
 }

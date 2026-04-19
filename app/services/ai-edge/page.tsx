@@ -8,7 +8,7 @@ import Link from "next/link";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
-  title: "AI Edge - AI-Powered Automation & Intelligence | EnterTab",
+  title: "AI Edge AI-Powered Automation & Intelligence | EnterTab",
   description: "Transform your business with AI-powered automation and intelligent solutions. EnterTab's AI Edge service delivers cutting-edge automation and machine learning capabilities.",
 };
 
@@ -23,7 +23,7 @@ export default function AIEdgePage() {
       {/* Title */}
       <div className="w-full text-center px-4 mb-8">
         <h1 className="text-[36px] font-semibold text-[#54BF93]">
-          AI Edge – AI-Powered <br></br>
+          AI Edge AI-Powered <br></br>
           Automation & Intelligence
         </h1>
       </div>

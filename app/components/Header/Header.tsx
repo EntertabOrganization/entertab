@@ -19,7 +19,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Who we Are", href: "/who-we-are" },
   { label: "Services", href: null, hasDropdown: true },
-  { label: "Our work", href: "#projects" },
+  { label: "Our work", href: "/ourwork" },
   { label: "Career", href: "/contact/start-your-career-journey" },
 ];
 

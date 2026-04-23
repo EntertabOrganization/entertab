@@ -196,13 +196,13 @@ export default function digitalTransformationPage() {
         </div>
 
         {/* Image Container */}
-        <div className="w-full max-w-[90rem] px-4 mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
+        <div className="w-full max-w-7xl px-4 mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
           <Image
             src="/Services/DigitalTransformationBg.png"
             alt="Digital Transformation"
             fill
             className="object-cover object-center"
-          sizes="(min-width: 1536px) 1440px, 100vw"          />
+          sizes="(min-width: 1280px) 1280px, 100vw"          />
         </div>
 
         {/* Content and Form Row */}

@@ -28,13 +28,13 @@ export default function HelpdeskPage() {
       </div>
 
       {/* Image Container */}
-      <div className="w-full max-w-[90rem] px-4 mb-10 sm:mb-14 md:mb-16 lg:mb-20 relative h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
+      <div className="w-full max-w-7xl px-4 mb-10 sm:mb-14 md:mb-16 lg:mb-20 relative h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
         <Image 
           src="/Services/HelpdeskBg.png" 
           alt="Helpdesk Solutions" 
           fill
           className="object-cover object-center"
-          sizes="(min-width: 1536px) 1440px, 100vw"        />
+          sizes="(min-width: 1280px) 1280px, 100vw"        />
       </div>
 
       {/* Content and Form Row */}

@@ -59,7 +59,7 @@ export default function aramvoxWorkPage() {
                 <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[900px] rounded-2xl overflow-hidden shadow-xl">
                         <Image
-                            src="/ourwork/aramvox/aramvoxHero.png"
+                            src="/ourwork/aramvox/AramvoxHero.png"
                             alt="Aramvox hero"
                             fill
                             priority
@@ -80,7 +80,7 @@ export default function aramvoxWorkPage() {
                 <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6 md:space-y-8">
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[1476px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/ourwork/aramvox/aramvoxPor1.png"
+                            src="/ourwork/aramvox/AramvoxPor1.png"
                             alt="Aramvox portfolio image 1"
                             fill
                             className="object-cover"
@@ -90,7 +90,7 @@ export default function aramvoxWorkPage() {
 
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[1914px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/ourwork/aramvox/aramvoxPor2.png"
+                            src="/ourwork/aramvox/AramvoxPor2.png"
                             alt="Aramvox portfolio image 2"
                             fill
                             className="object-cover"

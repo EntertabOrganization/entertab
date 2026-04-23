@@ -33,7 +33,7 @@ export default function SalesPage() {
                         src="/Services/SalesManagementBg.png"
                         alt="Sales Management"
                         fill
-                        className="object-cover"
+                        className="object-cover object-center"
           sizes="(min-width: 1536px) 1440px, 100vw"                    />
                 </div>
 

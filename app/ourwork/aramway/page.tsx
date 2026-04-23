@@ -61,11 +61,11 @@ export default function aramwayWorkPage() {
                 <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[900px] rounded-2xl overflow-hidden shadow-xl">
                         <Image
-                            src="/ourwork/aramway/AramwayHero.png"
+                            src="/ourwork/aramway/aramwayHero.png"
                             alt="Aramway hero"
                             fill
                             priority
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>
@@ -82,40 +82,40 @@ export default function aramwayWorkPage() {
                 <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6 md:space-y-8">
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[646px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/ourwork/aramway/AramwayPor1.png"
+                            src="/ourwork/aramway/aramwayPor1.png"
                             alt="Aramway portfolio image 1"
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>
 
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[646px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/ourwork/aramway/AramwayPor2.png"
+                            src="/ourwork/aramway/aramwayPor2.png"
                             alt="Aramway portfolio image 2"
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>
 
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[646px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/ourwork/aramway/AramwayPor3.png"
+                            src="/ourwork/aramway/aramwayPor3.png"
                             alt="Aramway portfolio image 3"
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 620px, (min-width: 768px) 48vw, 100vw"
                         />
                     </div>
 
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[1450px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/ourwork/aramway/AramwayPor4.png"
+                            src="/ourwork/aramway/aramwayPor4.png"
                             alt="Aramway portfolio image 4"
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 620px, (min-width: 768px) 48vw, 100vw"
                         />
                     </div>

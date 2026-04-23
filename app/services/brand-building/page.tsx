@@ -33,7 +33,7 @@ export default function BrandBuildingPage() {
           src="/Services/BrandBg.png" 
           alt="Brand Building" 
           fill
-          className="object-cover"
+          className="object-cover object-center"
           sizes="(min-width: 1536px) 1440px, 100vw"        />
       </div>
 

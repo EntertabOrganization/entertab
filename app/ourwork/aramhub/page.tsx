@@ -11,11 +11,11 @@ type InfoItem = {
 const infoItems: InfoItem[] = [
     {
         header: "Client:",
-        bullets: ["ARAMVOX"],
+        bullets: ["ARAMHUB"],
     },
     {
         header: "Industry:",
-        bullets: ["Public Relations &Corporate Communications"],
+        bullets: ["Real Estate"],
     },
     {
         header: "Services:",
@@ -63,7 +63,7 @@ export default function aramhubWorkPage() {
                             alt="Aramhub hero"
                             fill
                             priority
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>
@@ -83,7 +83,7 @@ export default function aramhubWorkPage() {
                             src="/ourwork/aramhub/aramhubPor1.png"
                             alt="Aramhub portfolio image 1"
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>
@@ -93,7 +93,7 @@ export default function aramhubWorkPage() {
                             src="/ourwork/aramhub/aramhubPor2.png"
                             alt="Aramhub portfolio image 2"
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>

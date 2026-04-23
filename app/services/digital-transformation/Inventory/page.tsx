@@ -33,7 +33,7 @@ export default function InventoryPage() {
           src="/Services/InventoryBg.png" 
           alt="Inventory Management Solutions" 
           fill
-          className="object-cover"
+          className="object-cover object-center"
           sizes="(min-width: 1536px) 1440px, 100vw"        />
       </div>
 

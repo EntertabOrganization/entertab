@@ -20,7 +20,7 @@ const navLinks = [
   { label: "Who we Are", href: "/who-we-are" },
   { label: "Services", href: null, hasDropdown: true },
   { label: "Our work", href: "#projects" },
-  { label: "Career", href: "#career" },
+  { label: "Career", href: "/contact/start-your-career-journey" },
 ];
 
 export default function Header() {
@@ -52,7 +52,7 @@ export default function Header() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#home" className="flex items-center shrink-0 mb-5">
+          <Link href="/" className="flex items-center shrink-0 mb-5">
             <svg width="120" height="25" viewBox="0 0 279 57" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-13 w-auto mt-5">
               <g clipPath="url(#clip0_289_4426)">
                 <path d="M207.639 23.9713H199.172V3.57368C199.557 3.46146 200.099 3.34061 200.79 3.2025C201.511 3.06868 202.243 3.0022 202.977 3.00396C204.229 2.90361 205.481 3.20646 206.545 3.86717C207.271 4.43688 207.639 5.47273 207.639 6.99198V23.9713ZM199.172 22.547H207.639V28.5894C207.601 29.0319 207.676 29.4766 207.856 29.8835C208.036 30.2904 208.316 30.6466 208.671 30.9201C209.548 31.4644 210.575 31.724 211.61 31.6624C212.239 31.6566 212.866 31.5872 213.481 31.4553C214.062 31.3529 214.63 31.1938 215.178 30.9805C215.527 31.3527 215.821 31.771 216.053 32.2235C216.317 32.7609 216.446 33.353 216.429 33.9499C216.432 34.5702 216.283 35.1821 215.995 35.7335C215.707 36.285 215.289 36.7599 214.776 37.1179C213.697 37.9523 211.892 38.3696 209.362 38.3696C206.143 38.3696 203.638 37.6502 201.848 36.2115C200.099 34.77 199.172 32.4221 199.172 29.1678V22.547ZM204.586 17.3677V10.8937H215.642C215.881 11.3055 216.072 11.7428 216.21 12.1971C216.409 12.802 216.506 13.4346 216.499 14.0703C216.579 14.9715 216.304 15.8685 215.729 16.5736C215.452 16.8418 215.122 17.0507 214.759 17.1873C214.396 17.324 214.009 17.3854 213.621 17.3677H204.586Z" fill="#53BE93"/>
@@ -106,7 +106,7 @@ export default function Header() {
                 </clipPath>
               </defs>
             </svg>
-          </a>
+          </Link>
 
           {/* Centered Navigation */}
           <nav className="hidden lg:flex items-center mx-auto">

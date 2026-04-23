@@ -33,7 +33,7 @@ export default function PurchasingPage() {
                         src="/Services/PurchasingBg.png"
                         alt="Purchasing Solutions"
                         fill
-                        className="object-cover"
+                        className="object-cover object-center"
           sizes="(min-width: 1536px) 1440px, 100vw"                    />
                 </div>
 

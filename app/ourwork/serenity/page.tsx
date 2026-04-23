@@ -60,11 +60,11 @@ export default function serenityWorkPage() {
                 <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[900px] rounded-2xl overflow-hidden shadow-xl">
                         <Image
-                            src="/ourwork/serenity/serenityHero.png"
+                            src="/ourwork/serenity/SerenityHero.png"
                             alt="Serenity hero"
                             fill
                             priority
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>
@@ -81,20 +81,20 @@ export default function serenityWorkPage() {
                 <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6 md:space-y-8">
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[1476px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/ourwork/serenity/serenityPor1.png"
+                            src="/ourwork/serenity/SerenityPor1.png"
                             alt="Serenity portfolio image 1"
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>
 
                     <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[1914px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/ourwork/serenity/serenityPor2.png"
+                            src="/ourwork/serenity/SerenityPor2.png"
                             alt="Serenity portfolio image 2"
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                             sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 90vw, 100vw"
                         />
                     </div>

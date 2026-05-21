@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 interface ContactPageFormProps {
   title?: string;
@@ -33,6 +34,8 @@ export default function ContactPageForm({
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -40,6 +43,7 @@ export default function ContactPageForm({
   };
 
   const handleServiceChange = (service: string) => {
+    if (isLoading) return;
     setFormData((prev) => ({
       ...prev,
       requiredServices: prev.requiredServices.includes(service)
@@ -48,13 +52,70 @@ export default function ContactPageForm({
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (formData.requiredServices.length === 0) {
+      Swal.fire({
+        icon: "warning",
+        title: "Missing Information",
+        text: "Please select at least one required service.",
+        confirmButtonColor: "#54BF93"
+      });
+      return;
+    }
 
     if (onSubmit) {
       onSubmit(formData);
-    } else {
-      console.log("Form submitted:", formData);
+      return;
+    }
+
+    setIsLoading(true);
+
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+
+    try {
+      const response = await fetch(`${apiUrl}/api/projects`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          name: formData.name,
+          requiredService: formData.requiredServices.join(", "),
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to submit project inquiry.");
+      }
+
+      Swal.fire({
+        icon: "success",
+        title: "Success!",
+        text: "Project inquiry submitted successfully! We will get back to you soon.",
+        confirmButtonColor: "#54BF93"
+      });
+      setFormData({
+        email: "",
+        name: "",
+        requiredServices: [],
+        message: "",
+      });
+    } catch (error: any) {
+      console.error("Project Inquiry submission error:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Submission Error",
+        text: error.message || "Failed to submit. Please check your connection and try again.",
+        confirmButtonColor: "#54BF93"
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -80,6 +141,7 @@ export default function ContactPageForm({
               placeholder="example@email.com"
               className="w-full px-5 py-4 rounded-lg bg-[#E6E6E6] text-text-dark text-base placeholder:text-text-light-gray focus:outline-none focus:ring-2 focus:ring-white/50"
               required
+              disabled={isLoading}
             />
           </div>
 
@@ -96,6 +158,7 @@ export default function ContactPageForm({
               placeholder="full name"
               className="w-full px-5 py-4 rounded-lg bg-[#E6E6E6] text-text-dark text-base placeholder:text-text-light-gray focus:outline-none focus:ring-2 focus:ring-white/50"
               required
+              disabled={isLoading}
             />
           </div>
 
@@ -108,13 +171,16 @@ export default function ContactPageForm({
               {SERVICES.map((service) => (
                 <label
                   key={service}
-                  className="flex items-center gap-3 cursor-pointer group"
+                  className={`flex items-center gap-3 cursor-pointer group ${
+                    isLoading ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
                   <input
                     type="checkbox"
                     checked={formData.requiredServices.includes(service)}
                     onChange={() => handleServiceChange(service)}
                     className="w-5 h-5 rounded border-2 border-white/40 bg-white/20 checked:bg-white checked:border-white text-green-600 cursor-pointer accent-white"
+                    disabled={isLoading}
                   />
                   <span className="text-black text-sm">{service}</span>
                 </label>
@@ -135,6 +201,7 @@ export default function ContactPageForm({
               rows={6}
               className="w-full px-5 py-4 rounded-lg bg-[#E6E6E6] text-text-dark text-base placeholder:text-text-light-gray focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
               required
+              disabled={isLoading}
             />
           </div>
         </div>
@@ -142,9 +209,38 @@ export default function ContactPageForm({
         {/* Submit */}
         <button
           type="submit"
-          className="w-full py-3.5 bg-btn-dark text-white text-base font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 cursor-pointer"
+          disabled={isLoading}
+          className={`w-full py-3.5 bg-btn-dark text-white text-base font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2 ${
+            isLoading ? "opacity-75 cursor-not-allowed" : ""
+          }`}
         >
-          {buttonText}
+          {isLoading ? (
+            <>
+              <svg
+                className="animate-spin h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Submitting...
+            </>
+          ) : (
+            buttonText
+          )}
         </button>
       </form>
     </div>

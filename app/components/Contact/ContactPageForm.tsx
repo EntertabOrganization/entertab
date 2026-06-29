@@ -18,6 +18,7 @@ const SERVICES = [
   "Contact Center Solutions",
   "UI/UX Design",
   "Digital Marketing",
+  "SEO",
   "Marketing Content Writing",
   "Social Media Management",
 ];

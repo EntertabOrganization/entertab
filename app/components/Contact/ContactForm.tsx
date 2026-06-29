@@ -68,6 +68,7 @@ export default function ContactForm() {
           "crm": "CRM Solution",
           "accounting": "Accounting System",
           "digital-marketing": "Digital Marketing",
+          "seo": "SEO",
           "content-writing": "Marketing Content Writing",
           "brand-building": "Brand Building",
           "ai-edge": "AI Edge – AI-Powered Automation & Intelligence"

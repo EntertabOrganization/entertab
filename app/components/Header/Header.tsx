@@ -11,6 +11,7 @@ const services = [
   { label: "Brand Building", href: "/services/brand-building" },
   { label: "UI/UX Design", href: "/services/ui-ux" },
   { label: "Digital Marketing", href: "/services/digital-marketing" },
+  { label: "SEO", href: "/services/seo" },
   { label: "Content Writing", href: "/services/content-writing" },
   { label: "Social Media", href: "/services/social-media" },
 ];

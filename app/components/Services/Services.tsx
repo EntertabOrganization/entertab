@@ -215,6 +215,10 @@ const services = [
 
     ),
   },
+  {
+    title: "SEO",
+    iconLabel: "Web",
+  },
 ];
 
 export default function Services() {

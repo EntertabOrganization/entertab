@@ -9,6 +9,7 @@ const services = [
   "Brand Building",
   "Contact Center Solutions",
   "Digital Marketing",
+  "SEO",
   "Marketing Content Writing",
   "Social Media Management",
 ];

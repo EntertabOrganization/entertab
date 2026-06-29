@@ -11,8 +11,9 @@ const services = [
     { id: 5, title: 'Brand Strategy', image: '/Services/Brand.png', href: '/services/brand-building' },
     { id: 6, title: 'UI/UX Design', image: '/Services/UiDesign.png', href: '/services/ui-ux' },
     { id: 7, title: 'Digital Marketing', image: '/Services/DigitalMarketing.png', href: '/services/digital-marketing' },
-    { id: 8, title: 'Marketing Content', image: '/Services/MarketingContent.png', href: '/services/content-writing' },
-    { id: 9, title: 'Social Media Management', image: '/Services/SocialMedia.png', href: '/services/social-media' },
+    { id: 8, title: 'SEO', image: '/Services/DigitalMarketing.png', href: '/services/seo' },
+    { id: 9, title: 'Marketing Content', image: '/Services/MarketingContent.png', href: '/services/content-writing' },
+    { id: 10, title: 'Social Media Management', image: '/Services/SocialMedia.png', href: '/services/social-media' },
 ];
 
 export default function ContactPage() {
@@ -47,7 +48,7 @@ export default function ContactPage() {
                                     Explore our comprehensive range of services
                                 </h2>
                                 <p style={{ fontWeight: 400, fontStyle: 'Regular', fontSize: '24px', lineHeight: '32px', letterSpacing: '0%', color: '#707072' }} className="mb-6">
-                                    At Entertab, our pride is in delivering excellence in every solution that guarantees your business success. We deploy services specifically tailored to maximize your brand's visibility and intensely engage your desired audience.
+                                    At Entertab, our pride is in delivering excellence in every solution that guarantees your business success. We deploy services specifically tailored to maximize your brand&apos;s visibility and intensely engage your desired audience.
                                 </p>
                                 <div>
                                     <Button

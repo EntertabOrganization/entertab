@@ -106,7 +106,7 @@ export default function WhoWeArePage() {
                                 <Button
                                     href="#contact"
                                     showArrow={true}
-                                    className="w-[110px] sm:w-[181px] h-[30px] sm:h-[44px] px-2 sm:px-4 py-[5px] sm:py-[10px] !rounded-[12px] justify-center bg-[#606063] hover:bg-[#606063] border-0 hover:border-0 text-[11px] sm:text-[16px]"
+                                    className="w-[140px] sm:w-[181px] h-[30px] sm:h-[44px] px-2 sm:px-4 py-[5px] sm:py-[10px] !rounded-[12px] justify-center bg-[#606063] hover:bg-[#606063] border-0 hover:border-0 text-[11px] sm:text-[16px]"
                                 >
                                     Get in Touch
                                 </Button>

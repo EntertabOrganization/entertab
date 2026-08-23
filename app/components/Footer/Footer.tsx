@@ -57,7 +57,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative flex h-[480px] flex-col overflow-hidden text-white"
+      className="relative flex h-auto flex-col overflow-hidden text-white"
       style={{
         background:
           "linear-gradient(to bottom left, #008194 0%, #008194 24.3%, #008194 77.9%, #0E495D 99.98%)",

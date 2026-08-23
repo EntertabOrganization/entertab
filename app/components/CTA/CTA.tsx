@@ -34,7 +34,7 @@ export default function CTA() {
             showArrow={false}
             className="min-w-[210px] absolute bottom-[60px] left-1/2 -translate-x-1/2 h-[44px] px-6 py-[10px] !rounded-[12px] justify-center bg-[#65C59D] hover:bg-[#65C59D] border-0 hover:border-0 text-[16px]"
           >
-            <span>Book your consultation now</span>
+            <span>Book consultation</span>
             <svg
               width="15"
               height="23"

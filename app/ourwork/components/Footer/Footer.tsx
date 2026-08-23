@@ -131,10 +131,10 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="relative z-10 mx-auto w-full max-w-8xl  flex-1 px-4 sm:px-6 lg:px-8 pt-10 md:pt-12 pb-6">
+      <div className="relative z-10 mx-auto w-full max-w-8xl flex-1 px-4 sm:px-6 lg:px-8 pt-10 md:pt-12 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 justify-items-center text-center">
           {/* Column 1 - Logo & Tagline */}
-          <div className="flex flex-col col-span-2 lg:col-span-1 items-center">
+          <div className="flex flex-col items-center">
             <Link href="/" className="inline-flex items-center mb-3">
               <Image
                 src="/FooterLogo.png"
@@ -151,24 +151,7 @@ From strategy and branding to web development, automation, AI, and digital trans
             </p>
           </div>
 
-          {/* Column 2 - Our Services */}
-          <div className="flex flex-col items-start text-left">
-            <h4 className="text-base font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2 w-full">
-              {services.map((service) => (
-                <li key={service}>
-                  <a
-                    href="#services"
-                    className="block text-white/70 text-sm hover:text-primary transition-colors duration-200"
-                  >
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3 - Contact Info */}
+          {/* Column 2 - Contact Info */}
           <div className="flex flex-col items-start text-left">
             <h4 className="text-base font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-3 flex flex-col items-start w-full">
@@ -191,10 +174,8 @@ From strategy and branding to web development, automation, AI, and digital trans
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="whitespace-pre-line text-sm">
-                 { `1775 Tysons Blvd,
-                  McLean, Virginia 22102,
-                   USA` }
+                <span className="text-white/70 text-sm text-left">
+                  1775 Tysons Blvd, McLean, Virginia 22102, USA
                 </span>
               </li>
               <li className="flex items-center justify-start gap-2">
@@ -241,18 +222,35 @@ From strategy and branding to web development, automation, AI, and digital trans
               </li>
             </ul>
           </div>
+
+          {/* Column 3 - Our Services */}
+          <div className="flex flex-col items-start text-left">
+            <h4 className="text-base font-semibold mb-4">Our Services</h4>
+            <ul className="space-y-2 w-full">
+              {services.map((service) => (
+                <li key={service}>
+                  <a
+                    href="#services"
+                    className="block text-white/70 text-sm hover:text-primary transition-colors duration-200"
+                  >
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="relative z-10">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-col flex-col-reverse justify-center items-center gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
             {/* Copyright */}
-            <p className="text-white/50 text-xs">Copyright &copy; 2026 entertab LLC</p>
+            <p className="order-3 md:order-1 text-white/50 text-xs">Copyright &copy; 2026 EnterTab LLC</p>
 
             {/* Payments */}
-            <div className="flex items-center gap-4">
+            <div className="order-2 md:order-3 flex items-center gap-4">
               <span className="text-white/70 text-sm">Payments</span>
               <div className="flex items-center gap-4">
                 {/* Mastercard */}
@@ -385,7 +383,7 @@ From strategy and branding to web development, automation, AI, and digital trans
             </div>
 
             {/* Follow us */}
-            <div className="flex flex-col justify-center items-center gap-2">
+            <div className="order-1 md:order-2 flex flex-col items-center gap-2 md:items-start">
               <p className="text-white/70 text-sm">Follow us</p>
               <div className="flex items-center gap-3">
                 {socialLinks.map((link) => (

@@ -95,7 +95,7 @@ export default function WhoWeArePage() {
                             {/* Overlay: Heading */}
                             <div className="absolute top-4 sm:top-8 left-4 sm:left-8 right-4 sm:right-auto">
                                 <h2
-                                    className="text-white font-normal text-xl sm:text-3xl lg:text-[48px] leading-tight lg:leading-[60px] tracking-tight max-w-[705px]"
+                                    className="text-white font-normal text-lg sm:text-3xl lg:text-[48px] leading-tight lg:leading-[60px] tracking-tight max-w-[705px]"
                                     style={{ fontFamily: "'Poppins', sans-serif" }}
                                 >
                                     Where innovation fuels brands and accelerates growth
@@ -106,7 +106,7 @@ export default function WhoWeArePage() {
                                 <Button
                                     href="#contact"
                                     showArrow={true}
-                                    className="w-[140px] sm:w-[181px] h-[38px] sm:h-[44px] px-3 sm:px-4 py-[8px] sm:py-[10px] !rounded-[12px] justify-center bg-[#606063] hover:bg-[#606063] border-0 hover:border-0 text-[14px] sm:text-[16px]"
+                                    className="w-[110px] sm:w-[181px] h-[30px] sm:h-[44px] px-2 sm:px-4 py-[5px] sm:py-[10px] !rounded-[12px] justify-center bg-[#606063] hover:bg-[#606063] border-0 hover:border-0 text-[11px] sm:text-[16px]"
                                 >
                                     Get in Touch
                                 </Button>
@@ -121,7 +121,7 @@ export default function WhoWeArePage() {
                         {/* Left: Who We Are box (~col-4) */}
                         <div className="flex items-start justify-center lg:justify-start">
                             <div className="px-4 sm:px-8 py-4 sm:py-6 inline-block">
-                                <span className="block text-3xl sm:text-4xl lg:text-[44px] font-semibold text-[#54BF93] text-center lg:text-left" style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "-0.02em" }}>
+                                <span className="block text-2xl sm:text-4xl lg:text-[44px] font-semibold text-[#54BF93] text-center lg:text-left" style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "-0.02em" }}>
                                     Who we are
                                 </span>
                             </div>
@@ -129,13 +129,13 @@ export default function WhoWeArePage() {
 
                         {/* Right: Description (~col-8) */}
                         <div className="lg:col-span-2 space-y-3">
-                            <p className="text-base sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}
+                            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}
                             >
                                 Entertab is a leading digital solutions provider founded in 2015
                                 and serving B2B and B2C enterprises from the Washington, D.C.
                                 metropolitan area.
                             </p>
-                            <p className="text-base sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
+                            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
                                 As a strategic creative and technology partner, we are committed
                                 to transforming businesses. Our mission is clear: to deliver
                                 innovative digital platforms and cutting-edge experiences that
@@ -150,10 +150,10 @@ export default function WhoWeArePage() {
                 <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                     {/* Track record header */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center mb-10 lg:mb-14">
-                        <h2 className="lg:col-span-5 text-xl sm:text-2xl md:text-3xl font-semibold text-primary leading-snug text-center lg:text-left">
+                        <h2 className="lg:col-span-5 text-lg sm:text-2xl md:text-3xl font-semibold text-primary leading-snug text-center lg:text-left">
                             Our track record tells the story
                         </h2>
-                        <p className="lg:col-span-7 text-base sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed text-center lg:text-left" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
+                        <p className="lg:col-span-7 text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed text-center lg:text-left" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
                             Data-driven results ensuring quality across our worldwide operations.
                         </p>
                     </div>
@@ -166,13 +166,13 @@ export default function WhoWeArePage() {
                             { value: "200+", label: "Our Client Visions Realized", sub: "Experience you can count on" },
                         ].map((stat) => (
                             <div key={stat.label} className="text-center sm:text-left">
-                                <p className="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-none sm:leading-[64px]" style={{ fontFamily: "Poppins, sans-serif", color: "#54BF93" }}>
+                                <p className="text-3xl sm:text-5xl lg:text-[56px] font-bold leading-none sm:leading-[64px]" style={{ fontFamily: "Poppins, sans-serif", color: "#54BF93" }}>
                                     {stat.value}
                                 </p>
-                                <p className="text-lg sm:text-xl md:text-2xl lg:text-[24px] font-normal mt-2" style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "-0.02em", lineHeight: "32px", color: "#606063" }}>
+                                <p className="text-base sm:text-xl md:text-2xl lg:text-[24px] font-normal mt-2" style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "-0.02em", lineHeight: "32px", color: "#606063" }}>
                                     {stat.label}
                                 </p>
-                                <p className="text-sm sm:text-base lg:text-lg font-normal" style={{ fontFamily: "Poppins, sans-serif", color: "#606063" }}>{stat.sub}</p>
+                                <p className="text-xs sm:text-base lg:text-lg font-normal" style={{ fontFamily: "Poppins, sans-serif", color: "#606063" }}>{stat.sub}</p>
                             </div>
                         ))}
                     </div>
@@ -183,7 +183,7 @@ export default function WhoWeArePage() {
                     <div className="overflow-hidden">
                         {/* Header */}
                         <div className="px-4 sm:px-10 pt-8 pb-6">
-                            <span className="block text-lg sm:text-xl lg:text-[24px] font-semibold" style={{ fontFamily: "Poppins, sans-serif", lineHeight: "32px", letterSpacing: "-0.02em", color: "#54BF93" }}>
+                            <span className="block text-base sm:text-xl lg:text-[24px] font-semibold" style={{ fontFamily: "Poppins, sans-serif", lineHeight: "32px", letterSpacing: "-0.02em", color: "#54BF93" }}>
                                 Our Core Beliefs
                             </span>
                         </div>
@@ -198,7 +198,7 @@ export default function WhoWeArePage() {
                             >
                                 {/* Left: Title + Arrow (~col-4) */}
                                 <div className="flex items-center gap-3 sm:gap-4">
-                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1E1E1F] leading-none">
+                                    <h3 className="text-xl sm:text-3xl lg:text-4xl font-bold text-[#1E1E1F] leading-none">
                                         {belief.title}
                                     </h3>
                                     <svg className="mb-9" width="44" height="75" viewBox="0 0 44 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -225,7 +225,7 @@ export default function WhoWeArePage() {
                                     </svg>
                                 </div>
                                 {/* Right: Description (~col-8) */}
-                                <p className="lg:col-span-2 text-base sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
+                                <p className="lg:col-span-2 text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed" style={{ fontFamily: "Poppins, sans-serif", color: "#707072" }}>
                                     {belief.description}
                                 </p>
                             </div>
@@ -253,7 +253,7 @@ export default function WhoWeArePage() {
                         {/* Center: Text */}
                         <div className="flex flex-col items-center text-center">
                             <h3
-                                className="text-lg sm:text-xl lg:text-2xl font-semibold text-center leading-snug lg:leading-[44px] max-w-xs"
+                                className="text-base sm:text-xl lg:text-2xl font-semibold text-center leading-snug lg:leading-[44px] max-w-xs"
                                 style={{
                                     fontFamily: "Poppins, sans-serif",
                                     letterSpacing: "-0.02em",
@@ -264,7 +264,7 @@ export default function WhoWeArePage() {
                             </h3>
 
                             <p
-                                className="text-sm sm:text-base lg:text-lg font-normal text-center leading-relaxed mt-4"
+                                className="text-xs sm:text-base lg:text-lg font-normal text-center leading-relaxed mt-4"
                                 style={{
                                     fontFamily: "Poppins, sans-serif",
                                     color: "#707072",

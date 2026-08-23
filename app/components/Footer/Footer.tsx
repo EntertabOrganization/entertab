@@ -149,24 +149,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2 - Our Services */}
-          <div className="flex flex-col items-start text-left">
-            <h4 className="text-base font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2 w-full">
-              {services.map((service) => (
-                <li key={service}>
-                  <a
-                    href="#services"
-                    className="block text-white/70 text-sm hover:text-primary transition-colors duration-200"
-                  >
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3 - Contact Info */}
+          {/* Column 2 - Contact Info */}
           <div className="flex flex-col items-start text-left">
             <h4 className="text-base font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-3 flex flex-col items-start w-full">
@@ -237,18 +220,35 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Column 3 - Our Services */}
+          <div className="flex flex-col items-start text-left">
+            <h4 className="text-base font-semibold mb-4">Our Services</h4>
+            <ul className="space-y-2 w-full">
+              {services.map((service) => (
+                <li key={service}>
+                  <a
+                    href="#services"
+                    className="block text-white/70 text-sm hover:text-primary transition-colors duration-200"
+                  >
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="relative z-10">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
             {/* Copyright */}
-            <p className="text-white/50 text-xs">Copyright &copy; 2026 entertab LLC</p>
+            <p className="order-3 md:order-1 text-white/50 text-xs">Copyright &copy; 2026 EnterTab LLC</p>
 
             {/* Payments */}
-            <div className="flex items-center gap-4">
+            <div className="order-2 md:order-3 flex items-center gap-4">
               <span className="text-white/70 text-sm">Payments</span>
               <div className="flex items-center gap-4">
                 {/* Mastercard */}
@@ -381,7 +381,7 @@ export default function Footer() {
             </div>
 
             {/* Follow us */}
-            <div className="flex flex-col items-start gap-2">
+            <div className="order-1 md:order-2 flex flex-col items-center gap-2 md:items-start">
               <p className="text-white/70 text-sm">Follow us</p>
               <div className="flex items-center gap-3">
                 {socialLinks.map((link) => (

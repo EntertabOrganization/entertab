@@ -27,7 +27,7 @@ export default function SeoPage() {
           <h1 className="text-[36px] font-semibold text-[#54BF93]">SEO</h1>
         </div>
 
-        <div className="w-full max-w-7xl px-4 mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
+        <div className="w-[90%] lg:w-[75%] md:w-[90%] px-4 mb-16 relative h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl mx-auto">
           <Image
             src="/Services/DigitalMarketingBg.png"
             alt="SEO services"

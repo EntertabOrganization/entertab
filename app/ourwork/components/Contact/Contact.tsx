@@ -37,7 +37,7 @@ export default function Contact() {
             </p>
 
             {/* Decorative Element Placeholder */}
-            <div className="absolute bottom-[-400px] left-[-15px] opacity-100">
+            <div className="hidden md:block absolute bottom-[-400px] left-[-15px] opacity-100">
               <svg
                 width="334"
                 height="334"

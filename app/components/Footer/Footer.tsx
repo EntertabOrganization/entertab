@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-  "AI Edge – AI-Powered Automation &",
+  "AI Edge AI Powered Automation & Intelligence",
   "Digital Transformation Hub",
   "Mobile App Development",
   "Website Development",

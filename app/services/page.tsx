@@ -4,7 +4,7 @@ import Footer from "@/app/components/Footer/Footer";
 import Button from "../components/ui/Button";
 
 const services = [
-    { id: 1, title: 'AI Edge – AI-Powered Automation & Intelligence', image: '/Services/Ai.png', href: '/services/ai-edge' },
+    { id: 1, title: 'AI Edge AI Powered Automation & Intelligence', image: '/Services/Ai.png', href: '/services/ai-edge' },
     { id: 2, title: 'Digital Transformation Hub', image: '/Services/DigitalTransformation.png', href: '/services/digital-transformation' },
     { id: 3, title: 'Mobile App Development', image: '/Services/Mobile.png', href: '/services/mobile-app' },
     { id: 4, title: 'Website Development', image: '/Services/Website.png', href: '/services/website' },

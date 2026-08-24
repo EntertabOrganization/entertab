@@ -10,7 +10,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600"] });
 
 const services = [
   {
-    title: "AI Edge – AI-Powered Automation & Intelligence",
+    title: "AI Edge AI Powered Automation & Intelligence",
     iconLabel: "AI",
     svg: (
       <svg width="115" height="116" viewBox="0 0 115 116" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -249,10 +249,10 @@ export default function Services() {
           setIsAnimating(false);
         }, ANIMATION_DURATION);
       }
-    }, 10000); // 10 seconds
+    }, AUTO_ADVANCE_INTERVAL);
 
     return () => clearInterval(timer);
-  }, [isAnimating, services.length]);
+  }, [isAnimating]);
 
   // Smoothly scroll the mobile carousel so its current card matches currentIndex
   const scrollMobileToIndex = (index: number) => {
@@ -306,7 +306,7 @@ export default function Services() {
   const handleMouseDown = (e: React.MouseEvent) => {
     if (isAnimating) return;
     dragStartX.current = e.clientX;
-    dragTimeRef.current = Date.now();
+    dragTimeRef.current = e.timeStamp;
     dragVelocityRef.current = 0;
   };
 
@@ -317,20 +317,11 @@ export default function Services() {
     setDragOffset(diff);
   };
 
-  // Handle mouse drag end
+  // Handle mouse drag end (also used for mouse leave, to cancel/settle the drag)
   const handleMouseUp = (e: React.MouseEvent) => {
     if (dragStartX.current === 0) return;
     const diff = e.clientX - dragStartX.current;
-    const timeDiff = Date.now() - dragTimeRef.current;
-    dragStartX.current = 0;
-    handleDragEnd(diff, timeDiff);
-  };
-
-  // Handle mouse leave (cancel drag)
-  const handleMouseLeave = (e: React.MouseEvent) => {
-    if (dragStartX.current === 0 || isAnimating) return;
-    const diff = e.clientX - dragStartX.current;
-    const timeDiff = Date.now() - dragTimeRef.current;
+    const timeDiff = e.timeStamp - dragTimeRef.current;
     dragStartX.current = 0;
     handleDragEnd(diff, timeDiff);
   };
@@ -339,7 +330,7 @@ export default function Services() {
   const handleTouchStart = (e: React.TouchEvent) => {
     if (isAnimating) return;
     dragStartX.current = e.touches[0].clientX;
-    dragTimeRef.current = Date.now();
+    dragTimeRef.current = e.timeStamp;
     dragVelocityRef.current = 0;
   };
 
@@ -354,7 +345,7 @@ export default function Services() {
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (dragStartX.current === 0) return;
     const diff = e.changedTouches[0].clientX - dragStartX.current;
-    const timeDiff = Date.now() - dragTimeRef.current;
+    const timeDiff = e.timeStamp - dragTimeRef.current;
     dragStartX.current = 0;
     handleDragEnd(diff, timeDiff);
   };
@@ -494,7 +485,7 @@ export default function Services() {
               transition: isAnimating ? 'transform 0.3s ease-out' : 'none',
             }}
           >
-            {getVisibleServices().map((service, index) => (
+            {getVisibleServices().map((service) => (
               <div
                 key={`${service.title}-${currentIndex}`}
                 className="h-full"

@@ -10,7 +10,7 @@ interface ContactPageFormProps {
 }
 
 const SERVICES = [
-  "AI Edge - AI-Powered Automation & Intelligence",
+  "AI Edge AI Powered Automation & Intelligence",
   "Digital Transformation Hub",
   "Website Development",
   "Mobile App Development",

@@ -71,7 +71,7 @@ export default function ContactForm() {
           "seo": "SEO",
           "content-writing": "Marketing Content Writing",
           "brand-building": "Brand Building",
-          "ai-edge": "AI Edge – AI-Powered Automation & Intelligence"
+          "ai-edge": "AI Edge AI Powered Automation & Intelligence"
         };
         payload.serviceType = mappings[pathKey || ""] || "Service Inquiry";
       }

@@ -145,7 +145,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/70 text-sm mt-4 leading-relaxed">
-              Transforming Ideas into Digital Success
+              Built for Business. Powered by Technology.
+From strategy and branding to web development, automation, AI, and digital transformation, we help businesses move forward with confidence
             </p>
           </div>
 
@@ -173,7 +174,9 @@ export default function Footer() {
                   />
                 </svg>
                 <span className="text-white/70 text-sm text-left">
-                  1775 Tysons Blvd, McLean, Virginia 22102, USA
+                  1775 Tysons Blvd
+                  <br /> McLean, Virginia 22102, 
+                  <br /> United States
                 </span>
               </li>
               <li className="flex items-center justify-start gap-2">

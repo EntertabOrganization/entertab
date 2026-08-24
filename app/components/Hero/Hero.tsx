@@ -21,7 +21,7 @@ export default function Hero() {
             <h1
               className={`${poppins.className} text-[28px] leading-[36px] sm:text-[36px] sm:leading-[44px] md:text-[42px] md:leading-[52px] lg:text-[48px] lg:leading-[60px] tracking-[-0.02em] font-normal text-gray-600`}
             >
-              We are a full-service digital partner, delivering innovative
+              We are a full Service digital partner, delivering innovative
               digital solutions for
               <br className="hidden md:block" />
               <span className="text-[#53BE93]">a smarter future.</span>

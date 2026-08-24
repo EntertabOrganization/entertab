@@ -214,11 +214,7 @@ const services = [
       </svg>
 
     ),
-  },
-  {
-    title: "SEO",
-    iconLabel: "Web",
-  },
+  }
 ];
 
 export default function Services() {
@@ -227,6 +223,8 @@ export default function Services() {
   const [isAnimating, setIsAnimating] = useState(false);
   const dragStartX = useRef(0);
   const sliderRef = useRef<HTMLDivElement>(null);
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
+  const mobileScrollDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Auto-advance slider every 30 seconds
   // State for tracking drag with timestamps and velocity
@@ -255,6 +253,45 @@ export default function Services() {
 
     return () => clearInterval(timer);
   }, [isAnimating, services.length]);
+
+  // Smoothly scroll the mobile carousel so its current card matches currentIndex
+  const scrollMobileToIndex = (index: number) => {
+    const container = mobileScrollRef.current;
+    const child = container?.children[index];
+    child?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+  };
+
+  useEffect(() => {
+    scrollMobileToIndex(currentIndex);
+  }, [currentIndex]);
+
+  // Keep pagination dots in sync once the mobile carousel settles after a swipe
+  const handleMobileScroll = () => {
+    if (mobileScrollDebounceRef.current) clearTimeout(mobileScrollDebounceRef.current);
+    mobileScrollDebounceRef.current = setTimeout(() => {
+      const container = mobileScrollRef.current;
+      if (!container) return;
+      const children = Array.from(container.children) as HTMLElement[];
+      const scrollCenter = container.scrollLeft + container.clientWidth / 2;
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+      children.forEach((child, i) => {
+        const childCenter = child.offsetLeft + child.offsetWidth / 2;
+        const distance = Math.abs(childCenter - scrollCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = i;
+        }
+      });
+      setCurrentIndex(closestIndex);
+    }, 120);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (mobileScrollDebounceRef.current) clearTimeout(mobileScrollDebounceRef.current);
+    };
+  }, []);
 
   // Get visible cards with wrapping
   const getVisibleServices = () => {
@@ -409,9 +446,32 @@ export default function Services() {
           thrive
         </p>
 
-        {/* Services Slider */}
+        {/* Services Slider - mobile: smooth peek carousel */}
         <div
-          className="overflow-hidden cursor-grab active:cursor-grabbing"
+          ref={mobileScrollRef}
+          onScroll={handleMobileScroll}
+          className="sm:hidden flex overflow-x-auto snap-x snap-mandatory scroll-smooth -mx-4 px-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          role="region"
+          aria-label="Services carousel"
+        >
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className="snap-start shrink-0 w-[82%] border-r border-gray-200 last:border-r-0"
+              draggable={false}
+            >
+              <ServiceCard
+                title={service.title}
+                iconLabel={service.iconLabel}
+                svg={service.svg}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Services Slider - tablet & desktop */}
+        <div
+          className="hidden sm:block overflow-hidden cursor-grab active:cursor-grabbing"
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
@@ -428,7 +488,7 @@ export default function Services() {
           tabIndex={0}
         >
           <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0"
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0"
             style={{
               transform: `translateX(${dragOffset}px)`,
               transition: isAnimating ? 'transform 0.3s ease-out' : 'none',

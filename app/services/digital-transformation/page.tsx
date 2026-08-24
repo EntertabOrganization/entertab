@@ -222,7 +222,7 @@ export default function digitalTransformationPage() {
                   We don’t just provide software; we build a unified digital ecosystem that connects your finance, HR, and supply chain into one seamless workflow. Eliminate silos, automate the mundane, and make data-driven decisions that propel your business forward.
                 </p>
                 <p>
-                  Beyond implementation, EnterTab remains your partner in continuous evolution. Our ERP systems are built to scale alongside your ambitions, adapting to new market demands while maintaining peak performance. By turning complex data into actionable insights, we empower your team to work smarter, reduce operational costs, and achieve a level of efficiency that transforms your business from the inside out."
+                  Beyond implementation, EnterTab remains your partner in continuous evolution. Our ERP systems are built to scale alongside your ambitions, adapting to new market demands while maintaining peak performance. By turning complex data into actionable insights, we empower your team to work smarter, reduce operational costs, and achieve a level of efficiency that transforms your business from the inside out.
                 </p>
               </div>
             </div>

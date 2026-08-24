@@ -51,7 +51,9 @@ export default function Header() {
       />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          isScrolled ? "h-20" : "h-16"
+        }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0 mb-5">
             <svg width="120" height="25" viewBox="0 0 279 57" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-13 w-auto mt-8">

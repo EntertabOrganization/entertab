@@ -42,7 +42,13 @@ export default function ContactForm() {
 
     try {
       let endpoint = "/api/contact-us";
-      let payload: any = {
+      const payload: {
+        name: string;
+        email: string;
+        phoneNumber: string;
+        message: string;
+        serviceType?: string;
+      } = {
         name: formData.name,
         email: formData.email,
         phoneNumber: formData.phone,
@@ -102,12 +108,12 @@ export default function ContactForm() {
         phone: "",
         message: "",
       });
-    } catch (error: any) {
+    } catch (error) {
       console.error("Submission error:", error);
       Swal.fire({
         icon: "error",
         title: "Submission Error",
-        text: error.message || "Failed to submit. Please check your connection and try again.",
+        text: error instanceof Error ? error.message : "Failed to submit. Please check your connection and try again.",
         confirmButtonColor: "#54BF93"
       });
     } finally {

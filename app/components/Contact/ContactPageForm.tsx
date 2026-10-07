@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { API_URL, readJson } from "@/app/lib/api";
 
 interface ContactPageFormProps {
   title?: string;
@@ -73,7 +74,7 @@ export default function ContactPageForm({
 
     setIsLoading(true);
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+    const apiUrl = API_URL;
 
     try {
       const response = await fetch(`${apiUrl}/api/projects`, {
@@ -89,7 +90,7 @@ export default function ContactPageForm({
         }),
       });
 
-      const data = await response.json();
+      const data = await readJson(response);
 
       if (!response.ok) {
         throw new Error(data.message || "Failed to submit project inquiry.");

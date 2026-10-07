@@ -5,6 +5,7 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { usePathname } from "next/navigation";
 import Swal from "sweetalert2";
+import { API_URL, readJson } from "@/app/lib/api";
 
 export default function ContactForm() {
   const pathname = usePathname();
@@ -38,7 +39,7 @@ export default function ContactForm() {
 
     setIsLoading(true);
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+    const apiUrl = API_URL;
 
     try {
       let endpoint = "/api/contact-us";
@@ -90,7 +91,7 @@ export default function ContactForm() {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
+      const data = await readJson(response);
 
       if (!response.ok) {
         throw new Error(data.message || "Something went wrong. Please try again.");

@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: `${process.env.NEXT_PUBLIC_API_URL || "https://entertab-dashboard.vercel.app"}`,
+        destination: `${(process.env.NEXT_PUBLIC_API_URL || "https://entertab-backend.vercel.app").replace(/\/+$/, "")}/api/:path*`,
       },
     ];
   },

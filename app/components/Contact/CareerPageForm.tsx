@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { API_URL, readJson } from "@/app/lib/api";
 
 interface CareerPageFormProps {
   title?: string;
@@ -90,7 +91,7 @@ export default function CareerPageForm({
 
     setIsLoading(true);
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+    const apiUrl = API_URL;
 
     try {
       const data = new FormData();
@@ -113,7 +114,7 @@ export default function CareerPageForm({
         // The browser needs to set it automatically with the correct boundary parameter.
       });
 
-      const result = await response.json();
+      const result = await readJson(response);
 
       if (!response.ok) {
         throw new Error(result.message || "Failed to submit career application.");

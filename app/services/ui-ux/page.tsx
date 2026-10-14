@@ -8,8 +8,8 @@ import Link from "next/link";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
-  title: "UI/UX Design - User-Centered Digital Experiences | EnterTab",
-  description: "Create intuitive and visually compelling interfaces. EnterTab's UI/UX Design service combines research and creativity for seamless user experiences.",
+  "title": "UI/UX Design Services for Websites & Apps | EnterTab",
+  "description": "Create clearer digital experiences with EnterTab UI/UX design. Explore user journeys, wireframes, prototypes, and interfaces for websites and apps."
 };
 
 export default function UIUXDesignPage() {

@@ -8,8 +8,8 @@ import Link from "next/link";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
-  title: "Website Development - High-Performance Digital Platforms | EnterTab",
-  description: "Build responsive websites optimized for speed and conversions. EnterTab's Website Development service delivers secure, scalable solutions tailored to your business.",
+  "title": "Custom Web Development Services for Business | EnterTab",
+  "description": "Build a responsive business website with EnterTab. Explore custom web development, corporate websites, and CMS integration. Discuss your next project."
 };
 
 export default function WebsitePage() {

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = { alternates: { canonical: "https://www.entertab.net/" } };
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import AboutUs from "./components/AboutUs/AboutUs";

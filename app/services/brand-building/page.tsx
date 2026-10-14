@@ -8,8 +8,8 @@ import Link from "next/link";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata = {
-  title: "Brand Building - End-to-End Brand Strategy | EnterTab",
-  description: "Create a strong and consistent brand identity that resonates with your audience. EnterTab's Brand Building service develops cohesive visual and verbal elements for lasting impact.",
+  "title": "Corporate Branding & Brand Identity Design | EnterTab",
+  "description": "Develop a consistent business identity with EnterTab. Explore brand strategy, logo design, visual identity, and brand guidelines. Discuss your brand."
 };
 
 export default function BrandBuildingPage() {

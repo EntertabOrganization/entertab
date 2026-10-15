@@ -19,14 +19,12 @@ export default function ConsentBanner() {
     // Recheck expiry when a visitor returns to the tab.
     const visibility = () => { if (document.visibilityState === "visible") refresh(); };
     document.addEventListener("visibilitychange", visibility);
-    return () => { window.removeEventListener("entertab-cookie-settings", show); window.removeEventListener("storage", storage); document.removeEventListener("visibilitychange", visibility); };
+    const expiryCheck = window.setInterval(refresh, 60000);
+    return () => { window.clearInterval(expiryCheck); window.removeEventListener("entertab-cookie-settings", show); window.removeEventListener("storage", storage); document.removeEventListener("visibilitychange", visibility); };
   }, []);
   useEffect(() => { const choice = readConsent(); applyConsent(choice); if (choice === "accepted") trackPage(pathname || "/"); }, [pathname]);
   function choose(choice: Exclude<ConsentChoice, "unset">) {
-    const previouslyLoaded = Boolean(document.getElementById("entertab-gtm"));
     rememberConsent(choice); applyConsent(choice); setOpen(false);
-    // Unload the previously accepted Google runtime after withdrawal.
-    if (choice === "rejected" && previouslyLoaded) { window.location.reload(); return; }
     if (choice === "accepted") trackPage(pathname || "/");
   }
   if (!open) return null;

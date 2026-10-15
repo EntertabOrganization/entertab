@@ -53,13 +53,17 @@ export function enquiryRecordId(data: Record<string, unknown>): unknown {
 }
 export function applyConsent(choice: ConsentChoice) {
   const w = gaWindow();
+  const wasAllowed = allowed;
   allowed = choice === "accepted";
   w["ga-disable-G-6822737K6Z"] = !allowed;
   if (!allowed) {
     if (document.getElementById("entertab-gtm")) pushCommand("consent", "update", {
       analytics_storage: "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied"
     });
-    lastPage = ""; deleteAnalyticsCookies(); return;
+    lastPage = ""; deleteAnalyticsCookies();
+    // Remove the accepted runtime on withdrawal, including another tab or expiry.
+    if (wasAllowed && document.getElementById("entertab-gtm")) window.location.reload();
+    return;
   }
   const settings = { analytics_storage: "granted", ad_storage: "denied",
     ad_user_data: "denied", ad_personalization: "denied" };
@@ -72,18 +76,22 @@ export function applyConsent(choice: ConsentChoice) {
   } else pushCommand("consent", "update", settings);
 }
 export function trackPage(path: string) {
-  if (!allowed || readConsent() === "rejected") return;
+  if (!allowed || readConsent() !== "accepted") return;
   // No query strings, fragments, form values or page titles in event payloads.
   const clean = path.split(/[?#]/)[0];
   if (clean === lastPage) return;
   lastPage = clean;
-  gaWindow().dataLayer?.push({ event: "entertab_page_view", page_location: location.origin + clean, debug_mode: !["www.entertab.net", "entertab.net"].includes(location.hostname) });
+  pushCommand("event", "page_view", { send_to: "G-6822737K6Z", page_location: location.origin + clean,
+    page_referrer: document.referrer.split(/[?#]/)[0],
+    debug_mode: !["www.entertab.net", "entertab.net"].includes(location.hostname) });
 }
 export function trackAcceptedEnquiry(formId: "contact_general" | "service_enquiry" | "project_enquiry", id: unknown) {
-  if (!allowed || readConsent() === "rejected" || typeof id !== "string" || !/^[a-f0-9]{24}$/i.test(id)) return;
+  if (!allowed || readConsent() !== "accepted" || typeof id !== "string" || !/^[a-f0-9]{24}$/i.test(id)) return;
   const key = `${formId}:${id}`;
   if (sentLeads.has(key)) return;
   sentLeads.add(key);
   // The record ID is used only for in-memory deduplication and never sent to Google.
-  gaWindow().dataLayer?.push({ event: "entertab_generate_lead", form_id: formId, debug_mode: !["www.entertab.net", "entertab.net"].includes(location.hostname) });
+  pushCommand("event", "generate_lead", { send_to: "G-6822737K6Z", form_id: formId,
+    page_location: location.origin + location.pathname, page_referrer: document.referrer.split(/[?#]/)[0],
+    debug_mode: !["www.entertab.net", "entertab.net"].includes(location.hostname) });
 }

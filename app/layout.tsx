@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ConsentBanner from "./components/Consent/ConsentBanner";
 import PageLoader from "./components/PageLoader/PageLoader";
 
 const geistSans = Geist({
@@ -49,6 +50,7 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://www.entertab.net/#organization\",\"name\":\"EnterTab\",\"legalName\":\"EnterTab LLC\",\"url\":\"https://www.entertab.net/\",\"email\":\"info@entertab.net\",\"telephone\":\"+1-202-770-0575\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"1775 Tysons Blvd\",\"addressLocality\":\"McLean\",\"addressRegion\":\"VA\",\"postalCode\":\"22102\",\"addressCountry\":\"US\"},\"sameAs\":[\"https://x.com/entertabnet\",\"https://www.linkedin.com/company/entertab-llc/\",\"https://www.instagram.com/entertab/\"]}" }} />
         <PageLoader />
         {children}
+        <ConsentBanner />
       </body>
     </html>
   );

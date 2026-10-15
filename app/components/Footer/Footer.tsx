@@ -1,3 +1,4 @@
+import CookieSettings from "../Consent/CookieSettings";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -248,7 +249,7 @@ From strategy and branding to web development, automation, AI, and digital trans
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
             {/* Copyright */}
-            <p className="order-3 md:order-1 text-white/50 text-xs">Copyright &copy; 2026 EnterTab LLC</p>
+            <p className="order-3 md:order-1 text-white/50 text-xs">Copyright &copy; 2026 EnterTab LLC <span className="ml-3"><CookieSettings /></span></p>
 
             {/* Payments */}
             <div className="order-2 md:order-3 flex items-center gap-4">

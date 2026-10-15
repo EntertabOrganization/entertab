@@ -5,6 +5,7 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { usePathname } from "next/navigation";
 import Swal from "sweetalert2";
+import { trackAcceptedEnquiry, enquiryRecordId } from "@/app/lib/analytics";
 import { API_URL, readJson } from "@/app/lib/api";
 
 export default function ContactForm() {
@@ -96,6 +97,8 @@ export default function ContactForm() {
       if (!response.ok) {
         throw new Error(data.message || "Something went wrong. Please try again.");
       }
+
+      if (data.success === true) trackAcceptedEnquiry(endpoint === "/api/services" ? "service_enquiry" : "contact_general", enquiryRecordId(data));
 
       Swal.fire({
         icon: "success",

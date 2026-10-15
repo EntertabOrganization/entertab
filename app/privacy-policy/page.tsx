@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
 <p>Please provide only information relevant to your enquiry or application. Do not include passwords, payment details or unnecessary sensitive information in a website message.</p>
 <h2>Storage, access and service providers</h2>
 <p>Website enquiries, job applications and CV files are stored in the website's MongoDB database and associated GridFS file storage. They are not manually transferred to email, CRM systems, external files or other platforms. Access to submissions is limited to the authorised person responsible for handling each type of submission.</p>
-<p>The website uses Vercel hosting and database services to deliver pages, receive submissions and store information. Hosting and website systems process technical request information in operating these functions.</p>
+<p>Vercel hosts the website. The website backend uses database services to receive submissions and store information. Hosting and website systems process technical request information in operating these functions.</p>
 <p>We do not sell these submissions or share them with unrelated third parties. Hosting and database service providers support the website functions described in this policy. This policy does not make a country-specific data residency commitment.</p>
 <h2>Analytics and cookies</h2>
 <p>EnterTab has not activated Google Analytics 4 or the proposed analytics cookie consent interface on this website. This policy does not state that those planned features are currently operating.</p>

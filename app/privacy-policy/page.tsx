@@ -3,19 +3,19 @@ import Link from "next/link";
 import styles from "./privacy.module.css";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | EnterTab",
-  description: "How EnterTab handles website enquiries, career applications and privacy requests.",
+  title: "Privacy Policy | entertab",
+  description: "How entertab handles website enquiries, career applications and privacy requests.",
   alternates: { canonical: "https://www.entertab.net/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {
   return <div className={styles.page}>
-    <header className={styles.header}><Link href="/">EnterTab</Link><Link href="/">Back to website</Link></header>
+    <header className={styles.header}><Link href="/">entertab</Link><Link href="/">Back to website</Link></header>
     <main className={styles.content}>
       <h1>Privacy Policy</h1>
 <p>Effective date: October 15, 2026</p>
-<h2>About EnterTab</h2>
-<p>EnterTab LLC is responsible for the website practices described in this policy. Our contact address is 1775 Tysons Blvd, McLean, Virginia 22102, United States. For privacy questions or requests, email <a href="mailto:info@entertab.net">info@entertab.net</a>.</p>
+<h2>About entertab</h2>
+<p>entertab LLC is responsible for the website practices described in this policy. Our contact address is 1775 Tysons Blvd, McLean, Virginia 22102, United States. For privacy questions or requests, email <a href="mailto:info@entertab.net">info@entertab.net</a>.</p>
 <p>This policy covers information handled through entertab.net, including business enquiries and career applications. Information handled during a separate client engagement may also be governed by the applicable service agreement.</p>
 <h2>Information you provide</h2>
 <p>Business enquiry forms request information such as your name, email address, telephone number, message and the services you are interested in. We use this information to respond to your enquiry and follow up on your request. We do not use website enquiry information for unrelated marketing campaigns.</p>
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
 <p>Vercel hosts the website. The website backend uses database services to receive submissions and store information. Hosting and website systems process technical request information in operating these functions.</p>
 <p>We do not sell these submissions or share them with unrelated third parties. Hosting and database service providers support the website functions described in this policy. This policy does not make a country-specific data residency commitment.</p>
 <h2>Analytics and cookies</h2>
-<p>EnterTab has not activated Google Analytics 4 or the proposed analytics cookie consent interface on this website. This policy does not state that those planned features are currently operating.</p>
+<p>entertab has not activated Google Analytics 4 or the proposed analytics cookie consent interface on this website. This policy does not state that those planned features are currently operating.</p>
 <p>Before introducing optional analytics, we will update the information provided about that processing and provide the relevant consent choices. You do not need to accept optional analytics to send an enquiry or career application.</p>
 <h2>Retention</h2>
 <p>Our approved retention schedule is:</p>
@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
 <p>If you follow a link to another website, that site's privacy practices apply to information you provide there. Please review its privacy information before providing personal information.</p>
 <h2>Updates and contact</h2>
 <p>We will update the effective date when this policy changes. Material changes to website data handling will be reflected in the policy and any relevant notices or choices.</p>
-<p>For privacy questions, requests or concerns, contact <a href="mailto:info@entertab.net">info@entertab.net</a> or write to EnterTab LLC, 1775 Tysons Blvd, McLean, Virginia 22102, United States.
+<p>For privacy questions, requests or concerns, contact <a href="mailto:info@entertab.net">info@entertab.net</a> or write to entertab LLC, 1775 Tysons Blvd, McLean, Virginia 22102, United States.
 </p>
     </main>
   </div>;

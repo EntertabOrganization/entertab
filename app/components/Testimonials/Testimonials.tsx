@@ -19,7 +19,7 @@ const testimonials = [
   {
     quote:
       "EnterTab transformed our digital presence completely. Their team was professional, creative, and always on time. The results exceeded our expectations and our customer engagement increased significantly.",
-    name: "Ahmed",
+    name: "Mark",
     role: "CEO",
     rating: 5,
     imageSrc: "/adam.png",

@@ -36,7 +36,7 @@ function renderInfoList(items: InfoItem[]) {
             {item.bullets.map((bullet) => (
                 <li key={`${item.header}-${typeof bullet === "string" ? bullet : bullet.label}`} className="text-lg md:text-xl text-[#707072] leading-relaxed list-disc list-inside">
                     {typeof bullet === "string" ? bullet : (
-                        <a href={bullet.href} className="underline underline-offset-4 hover:text-[#54BF93] transition-colors">
+                        <a href={bullet.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-[#54BF93] transition-colors">
                             {bullet.label}
                         </a>
                     )}

@@ -22,7 +22,8 @@ const infoItems: InfoItem[] = [
         bullets: [
             "Brand Design",
             "Brand Guidelines",
-            "Corporate Stationery"
+            "Corporate Stationery",
+            "Website development"
         ],
     },
 ];

@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 };
 const base = "/ourwork/samatechs/";
 const services = ["Branding", "Brand Guidelines", "Company Profile", "UI/UX", "Website Development"];
+const guidelines = [
+  { file: "guidelines-logo-design.jpg", alt: "Samatechs logo concept and construction" },
+  { file: "guidelines-logo-versions.jpg", alt: "Samatechs black and white logo versions" },
+  { file: "guidelines-colour-palette.jpg", alt: "Samatechs primary brand colour palette" },
+  { file: "guidelines-english-typography.jpg", alt: "Samatechs English typography: Quicksand and Montserrat" },
+  { file: "guidelines-arabic-typography.jpg", alt: "Samatechs Arabic typography: IBM Plex Sans Arabic" },
+  { file: "guidelines-brand-pattern.jpg", alt: "Samatechs geometric brand pattern" },
+];
 const gallery = [
   { file: "stationery.jpg", alt: "Samatechs branded letterhead and stationery", width: 1800, height: 1013 },
   { file: "profile.jpg", alt: "Samatechs company profile cover", width: 1800, height: 1013 },
@@ -37,6 +45,9 @@ export default function SamatechsWorkPage() {
           </div>
         </section>
         <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6 md:space-y-8">
+          <div className="space-y-6 md:space-y-8" aria-label="Samatechs brand guidelines">
+            {guidelines.map(item => <Image key={item.file} src={base + item.file} alt={item.alt} width={1800} height={1013} className="w-full h-auto rounded-2xl shadow-lg" sizes="(min-width:1280px) 1216px, 100vw" />)}
+          </div>
           {gallery.map(item => <Image key={item.file} src={base + item.file} alt={item.alt} width={item.width} height={item.height} className="w-full h-auto rounded-2xl shadow-lg" sizes="(min-width:1280px) 1216px, 100vw" />)}
           <div className="grid gap-8 p-4 md:p-12 bg-gradient-to-br from-[#e6eefc] to-[#d3e2f6] rounded-2xl">
             {[{ file: "website-hero.jpg", label: "SAMATECHS — Homepage", alt: "Selected Samatechs homepage design" }, { file: "website-services.jpg", label: "SAMATECHS — Advisory pillars", alt: "Selected Samatechs advisory services design" }].map(item => (

@@ -24,7 +24,7 @@ export default function SamatechsWorkPage() {
           <Image src={base + "logo.png"} alt="Samatechs logo" width={447} height={600} className="w-[145px] md:w-[200px] h-auto mb-10" priority />
         </section>
         <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
-          <Image src={base + "hero.jpg"} alt="Samatechs brand identity presentation" width={1800} height={1013} priority className="w-full h-auto rounded-2xl shadow-xl" sizes="(min-width:1280px) 1216px, 100vw" />
+          <Image src={base + "hero-light-paths.jpg"} alt="Flowing blue light paths representing connected insights and strategic clarity" width={1672} height={941} priority className="w-full h-auto rounded-2xl shadow-xl" sizes="(min-width:1280px) 1216px, 100vw" />
         </section>
         <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-20 flex items-center justify-around">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">

@@ -304,7 +304,7 @@ const projects: Array<{
 
       ),
     },
-    { name: "Samatechs", href: "/ourwork/samatechs", imageSrc: "/ourwork/samatechs/hero.jpg", topLeftIcon: <Image src="/ourwork/samatechs/logo-white.png" alt="Samatechs" width={110} height={148} className="w-[110px] h-auto" /> },
+    { name: "Samatechs", href: "/ourwork/samatechs", imageSrc: "/ourwork/samatechs/hero-light-paths.jpg", topLeftIcon: <Image src="/ourwork/samatechs/logo-white.png" alt="Samatechs" width={110} height={148} className="w-[110px] h-auto" /> },
   ];
 
 export default function Projects() {

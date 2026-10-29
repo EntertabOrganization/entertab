@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionTitle from "../ui/SectionTitle";
 import Button from "../ui/Button";
 import ProjectCard from "./ProjectCard";
@@ -303,6 +304,7 @@ const projects: Array<{
 
       ),
     },
+    { name: "Samatechs", href: "/ourwork/samatechs", imageSrc: "/ourwork/samatechs/hero.jpg", topLeftIcon: <Image src="/ourwork/samatechs/logo-white.png" alt="Samatechs" width={110} height={148} className="w-[110px] h-auto" /> },
   ];
 
 export default function Projects() {
@@ -349,6 +351,7 @@ export default function Projects() {
               bottomRightIcon={projects[3].bottomRightIcon}
               className="mt-5"
             />
+            <ProjectCard name={projects[6].name} href={projects[6].href} imageSrc={projects[6].imageSrc} topLeftIcon={projects[6].topLeftIcon} className="mt-5" />
           </div>
 
           <div className="flex flex-col gap-5">

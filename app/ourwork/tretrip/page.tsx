@@ -5,7 +5,7 @@ import TretripLogo from "@/app/components/Projects/TretripLogo";
 
 type InfoItem = {
     header: string;
-    bullets: (string | { label: string; href: string })[];
+    bullets: string[];
 };
 
 const infoItems: InfoItem[] = [
@@ -24,7 +24,7 @@ const infoItems: InfoItem[] = [
             "Brand Design",
             "Brand Guidelines",
             "Marketing Materials",
-            { label: "Website Development", href: "https://www.tretrip.com/" },
+            "Website Development",
         ],
     },
 ];
@@ -34,12 +34,8 @@ function renderInfoList(items: InfoItem[]) {
         <ul key={item.header} className="space-y-3">
             <li className="text-2xl md:text-3xl font-semibold text-[#54BF93]">{item.header}</li>
             {item.bullets.map((bullet) => (
-                <li key={`${item.header}-${typeof bullet === "string" ? bullet : bullet.label}`} className="text-lg md:text-xl text-[#707072] leading-relaxed list-disc list-inside">
-                    {typeof bullet === "string" ? bullet : (
-                        <a href={bullet.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-[#54BF93] transition-colors">
-                            {bullet.label}
-                        </a>
-                    )}
+                <li key={`${item.header}-${bullet}`} className="text-lg md:text-xl text-[#707072] leading-relaxed list-disc list-inside">
+                    {bullet}
                 </li>
             ))}
         </ul>

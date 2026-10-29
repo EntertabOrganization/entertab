@@ -58,7 +58,7 @@ export default function aramhubWorkPage() {
 
                 {/* Hero Section */}
                 <section className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
-                    <div className="relative w-full h-[280px] sm:h-[420px] lg:h-[900px] rounded-2xl overflow-hidden shadow-xl">
+                    <div className="relative w-full aspect-[8/5] rounded-2xl overflow-hidden shadow-xl">
                         <Image
                             src="/ourwork/aramhub/aramhubHero.png"
                             alt="Aramhub hero"

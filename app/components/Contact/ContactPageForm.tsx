@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { trackAcceptedEnquiry, enquiryRecordId } from "@/app/lib/analytics";
 import { API_URL, readJson } from "@/app/lib/api";
 
 interface ContactPageFormProps {
@@ -95,6 +96,8 @@ export default function ContactPageForm({
       if (!response.ok) {
         throw new Error(data.message || "Failed to submit project inquiry.");
       }
+
+      if (data.success === true) trackAcceptedEnquiry("project_enquiry", enquiryRecordId(data));
 
       Swal.fire({
         icon: "success",

@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
     <header className={styles.header}><Link href="/">entertab</Link><Link href="/">Back to website</Link></header>
     <main className={styles.content}>
       <h1>Privacy Policy</h1>
-<p>Effective date: October 15, 2026</p>
+<p>Effective date: November 2, 2026</p>
 <h2>About entertab</h2>
 <p>entertab LLC is responsible for the website practices described in this policy. Our contact address is 1775 Tysons Blvd, McLean, Virginia 22102, United States. For privacy questions or requests, email <a href="mailto:info@entertab.net">info@entertab.net</a>.</p>
 <p>This policy covers information handled through entertab.net, including business enquiries and career applications. Information handled during a separate client engagement may also be governed by the applicable service agreement.</p>
@@ -26,8 +26,10 @@ export default function PrivacyPolicyPage() {
 <p>Vercel hosts the website. The website backend uses database services to receive submissions and store information. Hosting and website systems process technical request information in operating these functions.</p>
 <p>We do not sell these submissions or share them with unrelated third parties. Hosting and database service providers support the website functions described in this policy. This policy does not make a country-specific data residency commitment.</p>
 <h2>Analytics and cookies</h2>
-<p>entertab has not activated Google Analytics 4 or the proposed analytics cookie consent interface on this website. This policy does not state that those planned features are currently operating.</p>
-<p>Before introducing optional analytics, we will update the information provided about that processing and provide the relevant consent choices. You do not need to accept optional analytics to send an enquiry or career application.</p>
+<p>With your permission, we use Google Analytics 4 through Google Tag Manager to understand website visits and successful business enquiry submissions. Optional analytics is not loaded until you select Accept analytics. Selecting Reject analytics does not affect access to the website or its forms.</p>
+<p>Analytics processes technical visit information, such as page paths and device information, and a form category when an enquiry is successfully received. We do not send the name, email address, telephone number, message, CV or database record identifier you submit through our forms to Analytics. Page URLs and referrers are sent without query strings or fragments.</p>
+<p>Your analytics choice is stored in your browser for six calendar months. Analytics cookies are configured to expire after 180 days. You can change or withdraw consent using Cookie Settings in the website footer. Withdrawal disables analytics, removes applicable first-party Analytics cookies and reloads the page; this may reset an unfinished form. Withdrawing consent does not erase data already collected.</p>
+<p>Google processes analytics data to provide this service. We do not enable advertising cookies, remarketing, Google Signals or user-provided-data matching as part of this setup. Analytics event data retention is configured for two months and user data retention for fourteen months, with user retention resetting on new activity.</p>
 <h2>Retention</h2>
 <p>Our approved retention schedule is:</p>
 <ul><li>Business enquiries: two years from the last contact.</li><li>Career applications and associated CV files: six months from the application submission date.</li></ul>
